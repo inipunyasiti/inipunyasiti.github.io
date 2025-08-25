@@ -1,25 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap');
 
 body {
-  background: #111;
-  color: #ff3c78;
-  font-family: 'Orbitron', 'Share Tech Mono', monospace, Arial, sans-serif;
-  margin: 40px;
-  letter-spacing: 0.5px;
+  background: #0b0c10;
+  color: #f3f3f3;
+  margin: 0;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h1, h2, h3 {
+.container {
+  background: rgba(20, 22, 32, 0.98);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #00ffe799, 0 1.5px 16px #ff3c7895;
+  padding: 2.5em 2em 2em 2em;
+  max-width: 400px;
+  text-align: center;
+  border: 2.5px solid #ff3c78;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  border: 3px solid #00ffe7;
+  box-shadow: 0 0 32px #ff3c78cc, 0 0 12px #00ffe799, 0 3px 7px #111;
+  margin-bottom: 1.1em;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+h1 {
   font-family: 'Orbitron', 'Share Tech Mono', monospace, Arial, sans-serif;
+  font-size: 2.5em;
   color: #00ffe7;
-  text-shadow: 2px 2px 8px #ff3c78, 0 0 1em #00ffe7;
+  text-shadow: 0 2px 20px #ff3c78cc, 0 0 2em #00ffe7;
+  margin-bottom: 0.3em;
   letter-spacing: 2px;
 }
 
-img {
-  border-radius: 8px;
-  border: 3px solid #ff3c78;
-  box-shadow: 0 6px 32px #00ffe799;
+.highlight {
+  color: #ff3c78;
+  text-shadow: 0 1px 8px #00ffe7;
+}
+
+.tagline {
+  font-family: 'Share Tech Mono', monospace, Arial, sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 0.8em;
+  color: #ff3c78;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 8px #00ffe7;
+}
+
+p {
+  font-family: 'Share Tech Mono', monospace, Arial, sans-serif;
+  font-size: 1.08em;
+  color: #e6e6e6;
+  margin-bottom: 1em;
+  text-shadow: 0 1px 4px #222, 0 0 2px #00ffe7;
+}
+
+.contact p {
+  margin: 0.3em 0;
 }
 
 a {
@@ -32,20 +75,4 @@ a {
 a:hover {
   color: #ff3c78;
   text-shadow: 0 0 8px #ff3c78, 0 0 1em #00ffe7;
-}
-
-ul {
-  list-style: square inside;
-  background: #22222288;
-  padding: 18px;
-  border-radius: 8px;
-  border-left: 4px solid #ff3c78;
-}
-
-p {
-  font-family: 'Share Tech Mono', monospace, Arial, sans-serif;
-  font-size: 1.15em;
-  color: #e6e6e6;
-  margin-bottom: 1em;
-  text-shadow: 0 1px 8px #111, 0 0 3px #00ffe7;
 }
