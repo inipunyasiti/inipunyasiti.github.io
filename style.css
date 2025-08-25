@@ -1,23 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap');
 
 body {
-  background: #0b0c10;
+  background: #101018;
   color: #f3f3f3;
-  margin: 0;
   min-height: 100vh;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .container {
-  background: rgba(20, 22, 32, 0.98);
-  border-radius: 18px;
+  background: rgba(26, 28, 43, 0.98);
+  border-radius: 16px;
   box-shadow: 0 8px 32px #00ffe799, 0 1.5px 16px #ff3c7895;
   padding: 2.5em 2em 2em 2em;
   max-width: 400px;
+  width: 95vw;
   text-align: center;
-  border: 2.5px solid #ff3c78;
+  border: 3px solid #ff3c78;
+  position: relative;
 }
 
 .profile-photo {
@@ -25,14 +27,14 @@ body {
   border: 3px solid #00ffe7;
   box-shadow: 0 0 32px #ff3c78cc, 0 0 12px #00ffe799, 0 3px 7px #111;
   margin-bottom: 1.1em;
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
 }
 
 h1 {
   font-family: 'Orbitron', 'Share Tech Mono', monospace, Arial, sans-serif;
-  font-size: 2.5em;
+  font-size: 2.2em;
   color: #00ffe7;
   text-shadow: 0 2px 20px #ff3c78cc, 0 0 2em #00ffe7;
   margin-bottom: 0.3em;
@@ -46,18 +48,18 @@ h1 {
 
 .tagline {
   font-family: 'Share Tech Mono', monospace, Arial, sans-serif;
-  font-size: 1.3em;
-  margin-bottom: 0.8em;
+  font-size: 1.22em;
+  margin-bottom: 0.7em;
   color: #ff3c78;
   letter-spacing: 1.5px;
   text-shadow: 0 1px 8px #00ffe7;
 }
 
-p {
+.desc {
   font-family: 'Share Tech Mono', monospace, Arial, sans-serif;
   font-size: 1.08em;
   color: #e6e6e6;
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
   text-shadow: 0 1px 4px #222, 0 0 2px #00ffe7;
 }
 
