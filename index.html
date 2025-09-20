@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Inipunyasiti Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Minimal styling for gallery display */
     .gallery { display:none; flex-wrap: wrap; gap: 20px; margin-top: 20px;}
     .gallery.active { display: flex; }
     .gallery img, .gallery video { width: 140px; height: 140px; object-fit: cover; border-radius: 8px; }
@@ -15,63 +14,41 @@
   </style>
 </head>
 <body>
-  <div class="finder-window">
-    <!-- Sidebar -->
-    <div class="finder-sidebar">
-      <div class="sidebar-title">Portfolio Sections</div>
-      <ul class="sidebar-list">
-        <li><a href="#unnecessary-fluff">Unnecessary Fluff</a></li>
-        <li><a href="#nose-nose-narratives">Nose Nose for Narratives</a></li>
-      </ul>
-      <div class="sidebar-title">Contact</div>
-      <ul class="sidebar-list">
-        <li><a href="mailto:inipunyasiti@gmail.com">Email</a></li>
-        <li><a href="https://github.com/inipunyasiti" target="_blank">GitHub</a></li>
-      </ul>
-    </div>
-    <div class="finder-main">
-      <h1>Inipunyasiti’s Portfolio</h1>
-      <div class="bio">
-        I don’t just write words—I engineer attention. <br>
-        Whether it’s marketing campaigns, sharp copy, or long-form storytelling, I craft content that hooks, informs, and lingers!
-      </div>
-      <!-- Unnecessary Fluff Section -->
-      <h2 id="unnecessary-fluff">Unnecessary Fluff</h2>
-      <div class="section-buttons">
-        <button class="section-btn" onclick="showGallery('pictures')">Pictures</button>
-        <button class="section-btn" onclick="showGallery('videos')">Videos</button>
-      </div>
-      <div id="gallery-pictures" class="gallery">
-        <!-- Add your images here: -->
-        <img src="assets/pictures/pic1.jpg" alt="Picture 1" />
-        <img src="assets/pictures/pic2.jpg" alt="Picture 2" />
-        <img src="assets/pictures/pic3.jpg" alt="Picture 3" />
-        <!-- ...more images -->
-      </div>
-      <div id="gallery-videos" class="gallery">
-        <!-- Add your videos here: -->
-        <video controls>
-          <source src="assets/videos/vid1.mp4" type="video/mp4">
-        </video>
-        <video controls>
-          <source src="assets/videos/vid2.mp4" type="video/mp4">
-        </video>
-        <!-- ...more videos -->
-      </div>
-      <!-- Nose Nose for Narratives Section -->
-      <h2 id="nose-nose-narratives">Nose Nose for Narratives</h2>
-      <button class="section-btn" onclick="showGallery('narratives')">See My Writings</button>
-      <div id="gallery-narratives" class="gallery">
-        <!-- Add your articles here: -->
-        <a href="https://medium.com/@inipunyasiti/your-article" target="_blank">
-          <img src="assets/pictures/article1.jpg" alt="Article 1" />
-        </a>
-        <a href="article2.html">
-          <img src="assets/pictures/article2.jpg" alt="Article 2" />
-        </a>
-        <!-- ...more articles -->
-      </div>
-    </div>
+  <h1>Inipunyasiti’s Portfolio</h1>
+  <div class="bio">
+    I don’t just write words—I engineer attention. <br>
+    Whether it’s marketing campaigns, sharp copy, or long-form storytelling, I craft content that hooks, informs, and lingers!
+  </div>
+  
+  <h2>Unnecessary Fluff</h2>
+  <div class="section-buttons">
+    <button class="section-btn" onclick="showGallery('pictures')">Pictures</button>
+    <button class="section-btn" onclick="showGallery('videos')">Videos</button>
+  </div>
+  <div id="gallery-pictures" class="gallery">
+    <!-- Add your images here -->
+    <img src="assets/pictures/pic1.jpg" alt="Pic 1" />
+    <img src="assets/pictures/pic2.png" alt="Pic 2" />
+  </div>
+  <div id="gallery-videos" class="gallery">
+    <!-- Add your videos here -->
+    <video controls>
+      <source src="assets/videos/vid1.mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="assets/videos/vid2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <h2>Nose Nose for Narratives</h2>
+  <button class="section-btn" onclick="showGallery('narratives')">See My Writings</button>
+  <div id="gallery-narratives" class="gallery">
+    <!-- Add your articles here -->
+    <a href="https://medium.com/@inipunyasiti/your-article" target="_blank">
+      <img src="assets/pictures/article1.jpg" alt="Article 1" />
+    </a>
+    <a href="article2.html">
+      <img src="assets/pictures/article2.jpg" alt="Article 2" />
+    </a>
   </div>
   <script>
     function showGallery(type) {
