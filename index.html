@@ -3,67 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siti Portfolio Gallery</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; color: #333; }
-    h1 { text-align: center; margin-bottom: 40px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-    .item { background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
-    .item img, .item video { width: 100%; border-radius: 8px; cursor: pointer; }
-    .caption { margin-top: 8px; font-size: 14px; word-wrap: break-word; }
-  </style>
+  <title>Inipunyasiti’s Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Siti Nurjanah – Portfolio Gallery</h1>
-  <div class="grid">
 
-    <!-- Images (grouped under gallery 'pictures') -->
-    <div class="item">
-      <a href="assets/pictures/Arya%20Sport%20Center%20Task%20-%20Siti%20(2).png" data-lightbox="pictures" data-title="Arya Sport Center Task (2)">
-        <img src="assets/pictures/Arya%20Sport%20Center%20Task%20-%20Siti%20(2).png" alt="Arya Sport Center Task (2)">
-      </a>
-      <div class="caption">Arya Sport Center Task (2)</div>
+  <!-- Cover Section -->
+  <section class="cover">
+    <h1>INIPUNYASITI’S PORTFOLIO</h1>
+    <p>I don’t just write words—I engineer attention.</p>
+    <p>Whether it’s marketing campaigns, sharp copy, or long-form storytelling, I craft content that hooks, informs, and lingers!</p>
+
+    <!-- Thumbnail Images -->
+    <div class="image-grid">
+      <img src="assets/pictures/Arya%20Sport%20Center%20Task%20-%20Siti%20(2).png" alt="Work 1" onclick="openModal(this)">
+      <img src="assets/pictures/Arya%20Sport%20Center%20Task%20-%20Siti%20(4).png" alt="Work 2" onclick="openModal(this)">
+      <img src="assets/pictures/cf6c0077-ca13-4a97-8d20-80ee8a345e2f.png" alt="Work 3" onclick="openModal(this)">
+      <img src="assets/pictures/5e094b54-42b7-47d9-8084-69426733a3fc.png" alt="Work 4" onclick="openModal(this)">
     </div>
+  </section>
 
-    <div class="item">
-      <a href="assets/pictures/Arya%20Sport%20Center%20Task%20-%20Siti%20(4).png" data-lightbox="pictures" data-title="Arya Sport Center Task (4)">
-        <img src="assets/pictures/Arya%20Sport%20Center%20Task%20-%20Siti%20(4).png" alt="Arya Sport Center Task (4)">
-      </a>
-      <div class="caption">Arya Sport Center Task (4)</div>
-    </div>
+  <!-- Contents Section -->
+  <section class="contents">
+    <h2>CONTENTS</h2>
+    <ol>
+      <li>Unnecessary Fluff</li>
+      <li>Pictures</li>
+      <li>Videos</li>
+      <li>Nose Nose for Narratives</li>
+    </ol>
+  </section>
 
-    <!-- Videos (grouped under gallery 'videos') -->
-    <div class="item">
-      <a href="assets/videos/Arya%20Sport%20Center%20Task%20-%20Siti%20(3).mp4" data-lightbox="videos" data-title="Arya Sport Center Task (3)">
-        <video>
-          <source src="assets/videos/Arya%20Sport%20Center%20Task%20-%20Siti%20(3).mp4" type="video/mp4">
-        </video>
-      </a>
-      <div class="caption">Arya Sport Center Task (3)</div>
-    </div>
-
-    <div class="item">
-      <a href="assets/videos/ROOT%20TASK-SITI%20NURJANAH%20(1).mp4" data-lightbox="videos" data-title="ROOT TASK (1)">
-        <video>
-          <source src="assets/videos/ROOT%20TASK-SITI%20NURJANAH%20(1).mp4" type="video/mp4">
-        </video>
-      </a>
-      <div class="caption">ROOT TASK (1)</div>
-    </div>
-
-    <div class="item">
-      <a href="assets/videos/BOOGALOO%20JAKARTA-SITI%20(2).mp4" data-lightbox="videos" data-title="BOOGALOO JAKARTA (2)">
-        <video>
-          <source src="assets/videos/BOOGALOO%20JAKARTA-SITI%20(2).mp4" type="video/mp4">
-        </video>
-      </a>
-      <div class="caption">BOOGALOO JAKARTA (2)</div>
-    </div>
-
+  <!-- Modal for Image Preview -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
   </div>
 
-  <!-- Lightbox2 Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <script>
+    function openModal(img) {
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("modal-img").src = img.src;
+    }
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
