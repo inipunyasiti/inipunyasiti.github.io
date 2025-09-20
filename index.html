@@ -5,45 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inipunyasiti’s Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+    }
+    header {
+      padding: 20px;
+    }
+    .profile-pic {
+      width: 120px;
+      border-radius: 50%;
+    }
+    h1 {
+      margin: 10px 0;
+    }
+    .bio {
+      margin: 10px 0;
+      color: #555;
+    }
+    .section-buttons {
+      margin: 20px 0;
+    }
+    .section-btn {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #444;
+      color: #fff;
+      font-size: 14px;
+    }
+    .gallery {
+      display: none;
+      margin: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 10px;
+    }
+    .gallery.active {
+      display: grid;
+    }
+    .gallery img, .gallery video {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .articles a {
+      display: block;
+      padding: 15px;
+      background: #f2f2f2;
+      margin: 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .articles a:hover {
+      background: #ddd;
+    }
+  </style>
 </head>
 <body>
-  <h1>Inipunyasiti’s Portfolio</h1>
-  <p class="bio">
-    I don’t just write words—I engineer attention.<br>
-    Whether it’s marketing campaigns, sharp copy, or long-form storytelling,<br>
-    I craft content that hooks, informs, and lingers!
-  </p>
+  <header>
+    <!-- Ganti ID GitHub kamu kalau mau -->
+    <img src="https://avatars.githubusercontent.com/inipunyasiti" alt="Profile" class="profile-pic">
+    <h1>Inipunyasiti’s Portfolio</h1>
+    <p class="bio">
+      I don’t just write words—I engineer attention.<br>
+      Whether it’s marketing campaigns, sharp copy, or long-form storytelling,<br>
+      I craft content that hooks, informs, and lingers!
+    </p>
+    <p>Email: <strong>inipunyasiti@gmail.com</strong></p>
+  </header>
 
   <div class="section-buttons">
     <button class="section-btn" onclick="showSection('pictures')">Pictures</button>
     <button class="section-btn" onclick="showSection('videos')">Videos</button>
-    <button class="section-btn" onclick="showSection('articles')">Nose Nose for Narratives</button>
+    <button class="section-btn" onclick="showSection('articles')">Narratives</button>
   </div>
 
   <!-- PICTURES -->
-  <div id="pictures" class="gallery">
-    <!-- semua gambar dari assets/pictures -->
-    <img src="assets/pictures/Arya Sport Center Task - Siti (2).png" alt="">
-    <img src="assets/pictures/Arya Sport Center Task - Siti (4).png" alt="">
-    <img src="assets/pictures/BOOGALOO JAKARTA-SITI.png" alt="">
-    <img src="assets/pictures/LUMINA-SITI (1).png" alt="">
-    <img src="assets/pictures/ROOT TASK-SITI NURJANAH.png" alt="">
-    <!-- tambahin semua gambar lain di folder sini -->
-  </div>
+<div id="pictures" class="gallery">
+  <img src="assets/pictures/Arya Sport Center Task - Siti (2).png" alt="">
+  <img src="assets/pictures/Arya Sport Center Task - Siti (4).png" alt="">
+  <img src="assets/pictures/Bronzed moment with Kokobum☀️Nothing compared after you delevoped a perfect tanMade from natura.webp" alt="">
+  <img src="assets/pictures/Girls under the sun—confident and protected 🌞 With Kokobum’s UV protection, enjoy the sun and k.jpg" alt="">
+  <img src="assets/pictures/Gorgeous girl loves a perfect tan!Level up your tan and unlock your natural summer tan 🌞KokoBu.webp" alt="">
+  <img src="assets/pictures/Kokobum Tanning Oil is your go-to companion for sunny days!Get that sun-kissed glow effortlessly (1).jpg" alt="">
+  <img src="assets/pictures/Kokobum Tanning Oil is your go-to companion for sunny days!Get that sun-kissed glow effortlessly.jpg" alt="">
+  <img src="assets/pictures/Peek inside the secret ingredients of our Frangipani tanning oil!Inside every bottle lies a nour.jpg" alt="">
+  <img src="assets/pictures/Sharing is caring, especially during the most wonderful time of the year!Give the gift of a perf.jpg" alt="">
+  <img src="assets/pictures/Start a proper way to achieving your tan goals ❣️Each Bottle of Kokobum not only moisturizes you.jpg" alt="">
+  <img src="assets/pictures/Tan line goals with Kokobum Tanning Oil 🌞✨ Achieve the perfect sun-kissed glow with a formula t.jpg" alt="">
+  <img src="assets/pictures/That feeling when your skin achieve best tanDiscover our a perfect self tanner and achieve flawl.jpg" alt="">
+  <img src="assets/pictures/The secret to the most healthy glow is here!Kokobum Tanning Oil is made from coconut power that (1).jpg" alt="">
+  <img src="assets/pictures/Your summer essential is here!Spend your summer tanning with a product that truly cares for your.jpg" alt="">
+  <img src="assets/pictures/get (1).jpeg" alt="">
+  <img src="assets/pictures/get (2).jpeg" alt="">
+  <img src="assets/pictures/get.jpeg" alt="">
+</div>
 
   <!-- VIDEOS -->
-  <div id="videos" class="gallery">
-    <!-- semua video dari assets/videos -->
-    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (1).mp4"></video>
-    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (2).mp4"></video>
-    <video controls src="assets/videos/BOOGALOO JAKARTA-SITI.mp4"></video>
-    <video controls src="assets/videos/LUMINA-SITI (4).mp4"></video>
-    <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (2).mp4"></video>
-    <!-- tambahin semua video lain di folder sini -->
-  </div>
+<div id="videos" class="gallery">
+  <video controls src="assets/videos/15 seconds to the perfect tan – quick, easy, and flawless✨ Packed with nourishing ingredients fo.mp4"></video>
+  <video controls src="assets/videos/Arya Sport Center Task - Siti (3).mp4"></video>
+  <video controls src="assets/videos/Arya Sport Center Task - Siti (4).mp4"></video>
+  <video controls src="assets/videos/Arya Sport Center Task - Siti (5).mp4"></video>
+  <video controls src="assets/videos/Arya Sport Center Task - Siti (6).mp4"></video>
+  <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (2).mp4"></video>
+  <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (3).mp4"></video>
+  <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (6).mp4"></video>
+  <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (7).mp4"></video>
+  <video controls src="assets/videos/BOOGALOO JAKARTA-SITI (1).mp4"></video>
+  <video controls src="assets/videos/BOOGALOO JAKARTA-SITI (2).mp4"></video>
+  <video controls src="assets/videos/BOOGALOO JAKARTA-SITI.mp4"></video>
+  <video controls src="assets/videos/Golden hour makes your problem go away✨Make most out your session of sun with kokobum tanning oi.mp4"></video>
+  <video controls src="assets/videos/LUMINA-SITI (4).mp4"></video>
+  <video controls src="assets/videos/LUMINA-SITI (5).mp4"></video>
+  <video controls src="assets/videos/LUMINA-SITI (6).mp4"></video>
+  <video controls src="assets/videos/LUMINA-SITI (7).mp4"></video>
+  <video controls src="assets/videos/LUMINA-SITI (8).mp4"></video>
+  <video controls src="assets/videos/LUMINA-SITI.mp4"></video>
+  <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (1).mp4"></video>
+  <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (2).mp4"></video>
+  <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (3).mp4"></video>
+  <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (4).mp4"></video>
+  <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (6).mp4"></video>
+  <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (7).mp4"></video>
+  <video controls src="assets/videos/ROOT TASK-SITI NURJANAH.mp4"></video>
+  <video controls src="assets/videos/🎄✨ Merry Christmas, Sunseekers! ✨🎄May your holidays be glowing and golden, just like your perf.mp4"></video>
+</div>
+
 
   <!-- ARTICLES -->
-  <div id="articles" class="gallery">
+  <div id="articles" class="gallery articles">
     <a href="https://inipunyasiti.wordpress.com/" target="_blank">WordPress</a>
     <a href="https://medium.com/@inipunyasiti" target="_blank">Medium</a>
     <a href="https://dietpartner.id/author/siti-nurjanah/" target="_blank">DietPartner</a>
