@@ -2,53 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inipunyasiti’s Portfolio</title>
+  <title>Inipunyasiti Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .bio {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.2em;
+    }
+    .section-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .section-btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      background: #007aff;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1em;
+      border: none;
+    }
+    .section-btn:hover { background: #005fcc; }
+    .gallery {
+      display: none;
+      column-count: 3; /* pinterest style */
+      column-gap: 16px;
+      margin: 20px auto;
+      max-width: 1000px;
+    }
+    .gallery.active { display: block; }
+    .gallery img, .gallery video {
+      width: 100%;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover, .gallery video:hover {
+      transform: scale(1.03);
+    }
+    .gallery a {
+      display: inline-block;
+      width: 100%;
+      break-inside: avoid;
+    }
+  </style>
 </head>
 <body>
+  <h1>Inipunyasiti’s Portfolio</h1>
+  <div class="bio">
+    I don’t just write words—I engineer attention. <br>
+    Whether it’s marketing campaigns, sharp copy, or long-form storytelling,<br>
+    I craft content that hooks, informs, and lingers!
+  </div>
 
-  <!-- Cover Section -->
-  <section class="cover">
-    <h1>INIPUNYASITI’S PORTFOLIO</h1>
-    <p>I don’t just write words—I engineer attention.</p>
-    <p>Whether it’s marketing campaigns, sharp copy, or long-form storytelling, I craft content that hooks, informs, and lingers!</p>
+  <!-- Section: Unnecessary Fluff -->
+  <h2>Unnecessary Fluff</h2>
+  <div class="section-buttons">
+    <button class="section-btn" onclick="showGallery('pictures')">Pictures</button>
+    <button class="section-btn" onclick="showGallery('videos')">Videos</button>
+  </div>
 
-    <!-- Thumbnail Images -->
-    <div class="image-grid">
-      <img src="assets/pictures/Arya%20Sport%20Center%20Task%20-%20Siti%20(2).png" alt="Work 1" onclick="openModal(this)">
-      <img src="assets/pictures/Arya%20Sport%20Center%20Task%20-%20Siti%20(4).png" alt="Work 2" onclick="openModal(this)">
-      <img src="assets/pictures/cf6c0077-ca13-4a97-8d20-80ee8a345e2f.png" alt="Work 3" onclick="openModal(this)">
-      <img src="assets/pictures/5e094b54-42b7-47d9-8084-69426733a3fc.png" alt="Work 4" onclick="openModal(this)">
-    </div>
-  </section>
+  <div id="gallery-pictures" class="gallery">
+    <img src="assets/pictures/Arya%20Sport%20Center%20Task%20-%20Siti%20(2).png" alt="Arya 1">
+    <img src="assets/pictures/Arya%20Sport%20Center%20Task%20-%20Siti%20(4).png" alt="Arya 2">
+    <img src="assets/pictures/Girls under the sun—confident and protected 🌞 With Kokobum’s UV protection, enjoy the sun and k.jpg" alt="Kokobum">
+    <!-- tambahkan semua gambar portfolio kamu di sini -->
+  </div>
 
-  <!-- Contents Section -->
-  <section class="contents">
-    <h2>CONTENTS</h2>
-    <ol>
-      <li>Unnecessary Fluff</li>
-      <li>Pictures</li>
-      <li>Videos</li>
-      <li>Nose Nose for Narratives</li>
-    </ol>
-  </section>
+  <div id="gallery-videos" class="gallery">
+    <video controls>
+      <source src="assets/videos/Arya%20Sport%20Center%20Task%20-%20Siti%20(3).mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="assets/videos/Arya%20Sport%20Center%20Task%20-%20Siti%20(4).mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="assets/videos/Avirtech%20Task-Siti%20Nurjanah%20(2).mp4" type="video/mp4">
+    </video>
+    <!-- tambahkan semua video portfolio kamu di sini -->
+  </div>
 
-  <!-- Modal for Image Preview -->
-  <div id="modal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modal-img">
+  <!-- Section: Narratives -->
+  <h2>Nose Nose for Narratives</h2>
+  <div class="gallery active" id="gallery-narratives">
+    <a href="https://inipunyasiti.wordpress.com/" target="_blank">
+      <img src="assets/pictures/article1.jpg" alt="WordPress">
+    </a>
+    <a href="https://medium.com/@inipunyasiti" target="_blank">
+      <img src="assets/pictures/article2.jpg" alt="Medium">
+    </a>
+    <a href="https://dietpartner.id/author/siti-nurjanah/" target="_blank">
+      <img src="assets/pictures/article3.jpg" alt="Dietpartner">
+    </a>
+    <a href="https://campusnet.news/author/siti-nurjanah/" target="_blank">
+      <img src="assets/pictures/article4.jpg" alt="CampusNet">
+    </a>
+    <a href="https://optima.web.id/id/author/siti-nurjanah/" target="_blank">
+      <img src="assets/pictures/article5.jpg" alt="Optima">
+    </a>
   </div>
 
   <script>
-    function openModal(img) {
-      document.getElementById("modal").style.display = "block";
-      document.getElementById("modal-img").src = img.src;
-    }
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
+    function showGallery(type) {
+      document.querySelectorAll('.gallery').forEach(g => g.classList.remove('active'));
+      document.getElementById('gallery-' + type).classList.add('active');
     }
   </script>
-
 </body>
 </html>
