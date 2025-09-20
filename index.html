@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inipunyasiti Portfolio</title>
   <style>
-    /* RESET */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -16,7 +15,6 @@
       padding: 40px 20px;
     }
 
-    /* HEADER */
     header {
       text-align: center;
       margin-bottom: 50px;
@@ -34,7 +32,6 @@
     h1 {
       font-size: 2.5rem;
       font-weight: 700;
-      letter-spacing: 1px;
       margin-bottom: 10px;
     }
 
@@ -50,7 +47,6 @@
       color: #111;
     }
 
-    /* NAV BUTTONS */
     .nav-buttons {
       display: flex;
       justify-content: center;
@@ -76,33 +72,29 @@
       transform: translateY(-2px);
     }
 
-    /* GALLERY GRID */
-    .grid {
-      display: none;
-      max-width: 1200px;
-      margin: 0 auto;
+    .section { display: none; max-width: 1200px; margin: 0 auto; }
+    .section.active { display: block; }
+
+    .pictures-grid, .videos-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 20px;
     }
 
-    .grid.active { display: grid; }
-
-    .grid img,
-    .grid video {
+    .pictures-grid img,
+    .videos-grid video {
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.12);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .grid img:hover,
-    .grid video:hover {
+    .pictures-grid img:hover,
+    .videos-grid video:hover {
       transform: scale(1.03);
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
-    /* NARRATIVES LINKS */
     .links a {
       display: block;
       background: #f7f7f7;
@@ -118,14 +110,6 @@
     .links a:hover {
       background: #eaeaea;
       transform: translateX(5px);
-    }
-
-    @media (max-width: 768px) {
-      h1 { font-size: 2rem; }
-    }
-
-    @media (max-width: 500px) {
-      .nav-buttons { flex-direction: column; gap: 12px; }
     }
   </style>
 </head>
@@ -145,79 +129,77 @@
   </div>
 
   <!-- PICTURES -->
-  <div id="pictures" class="grid">
-    <img src="assets/pictures/Arya Sport Center Task - Siti (2).png" alt=""> 
-    <img src="assets/pictures/Arya Sport Center Task - Siti (4).png" alt=""> 
-    <img src="assets/pictures/Bronzed moment with Kokobum☀️Nothing compared after you delevoped a perfect tanMade from natura.webp" alt=""> 
-    <img src="assets/pictures/Girls under the sun—confident and protected 🌞 With Kokobum’s UV protection, enjoy the sun and k.jpg" alt=""> 
-    <img src="assets/pictures/Gorgeous girl loves a perfect tan!Level up your tan and unlock your natural summer tan 🌞KokoBu.webp" alt=""> 
-    <img src="assets/pictures/Kokobum Tanning Oil is your go-to companion for sunny days!Get that sun-kissed glow effortlessly (1).jpg" alt=""> 
-    <img src="assets/pictures/Kokobum Tanning Oil is your go-to companion for sunny days!Get that sun-kissed glow effortlessly.jpg" alt=""> 
-    <img src="assets/pictures/Peek inside the secret ingredients of our Frangipani tanning oil!Inside every bottle lies a nour.jpg" alt=""> 
-    <img src="assets/pictures/Sharing is caring, especially during the most wonderful time of the year!Give the gift of a perf.jpg" alt=""> 
-    <img src="assets/pictures/Start a proper way to achieving your tan goals ❣️Each Bottle of Kokobum not only moisturizes you.jpg" alt=""> 
-    <img src="assets/pictures/Tan line goals with Kokobum Tanning Oil 🌞✨ Achieve the perfect sun-kissed glow with a formula t.jpg" alt=""> 
-    <img src="assets/pictures/That feeling when your skin achieve best tanDiscover our a perfect self tanner and achieve flawl.jpg" alt=""> 
-    <img src="assets/pictures/The secret to the most healthy glow is here!Kokobum Tanning Oil is made from coconut power that (1).jpg" alt=""> 
-    <img src="assets/pictures/Your summer essential is here!Spend your summer tanning with a product that truly cares for your.jpg" alt=""> 
-    <img src="assets/LUMINA-SITI (1).png" alt="Lumina 1"> 
-    <img src="assets/LUMINA-SITI (2).png" alt="Lumina 2"> 
-    <img src="assets/LUMINA-SITI (3).png" alt="Lumina 3"> 
-    <img src="assets/LUMINA-SITI (4).png" alt="Lumina 4"> 
-    <img src="assets/LUMINA-SITI (5).png" alt="Lumina 5"> 
-    <img src="assets/LUMINA-SITI (6).png" alt="Lumina 6"> 
-    <img src="assets/LUMINA-SITI (7).png" alt="Lumina 7"> 
-    <img src="assets/LUMINA-SITI (8).png" alt="Lumina 8"> 
-    <img src="assets/ROOT TASK-SITI NURJANAH.png" alt="Root"> 
-    <img src="assets/Avirtech Task-Siti Nurjanah (1).png" alt="Avirtech 1"> 
-    <img src="assets/Avirtech Task-Siti Nurjanah.png" alt="Avirtech"> 
-    <img src="assets/BOOGALOO JAKARTA-SITI (1).png" alt="Boogaloo 1"> 
-    <img src="assets/BOOGALOO JAKARTA-SITI (2).png" alt="Boogaloo 2"> 
-    <img src="assets/BOOGALOO JAKARTA-SITI (4).png" alt="Boogaloo 4"> 
-    <img src="assets/BOOGALOO JAKARTA-SITI (5).png" alt="Boogaloo 5"> 
-    <img src="assets/BOOGALOO JAKARTA-SITI.png" alt="Boogaloo"> 
-    <img src="assets/Arya Sport Center Task - Siti.png" alt="Arya Sport Center"> 
-    <img src="assets/pictures/get (1).jpeg" alt=""> 
-    <img src="assets/pictures/get (2).jpeg" alt=""> 
+  <div id="pictures" class="section pictures-grid">
+    <img src="assets/pictures/Arya Sport Center Task - Siti (2).png" alt="">
+    <img src="assets/pictures/Arya Sport Center Task - Siti (4).png" alt="">
+    <img src="assets/pictures/Bronzed moment with Kokobum☀️Nothing compared after you delevoped a perfect tanMade from natura.webp" alt="">
+    <img src="assets/pictures/Girls under the sun—confident and protected 🌞 With Kokobum’s UV protection, enjoy the sun and k.jpg" alt="">
+    <img src="assets/pictures/Gorgeous girl loves a perfect tan!Level up your tan and unlock your natural summer tan 🌞KokoBu.webp" alt="">
+    <img src="assets/pictures/Kokobum Tanning Oil is your go-to companion for sunny days!Get that sun-kissed glow effortlessly (1).jpg" alt="">
+    <img src="assets/pictures/Kokobum Tanning Oil is your go-to companion for sunny days!Get that sun-kissed glow effortlessly.jpg" alt="">
+    <img src="assets/pictures/Peek inside the secret ingredients of our Frangipani tanning oil!Inside every bottle lies a nour.jpg" alt="">
+    <img src="assets/pictures/Sharing is caring, especially during the most wonderful time of the year!Give the gift of a perf.jpg" alt="">
+    <img src="assets/pictures/Start a proper way to achieving your tan goals ❣️Each Bottle of Kokobum not only moisturizes you.jpg" alt="">
+    <img src="assets/pictures/Tan line goals with Kokobum Tanning Oil 🌞✨ Achieve the perfect sun-kissed glow with a formula t.jpg" alt="">
+    <img src="assets/pictures/That feeling when your skin achieve best tanDiscover our a perfect self tanner and achieve flawl.jpg" alt="">
+    <img src="assets/pictures/The secret to the most healthy glow is here!Kokobum Tanning Oil is made from coconut power that (1).jpg" alt="">
+    <img src="assets/pictures/Your summer essential is here!Spend your summer tanning with a product that truly cares for your.jpg" alt="">
+    <img src="assets/LUMINA-SITI (1).png" alt="Lumina 1">
+    <img src="assets/LUMINA-SITI (2).png" alt="Lumina 2">
+    <img src="assets/LUMINA-SITI (3).png" alt="Lumina 3">
+    <img src="assets/LUMINA-SITI (4).png" alt="Lumina 4">
+    <img src="assets/LUMINA-SITI (5).png" alt="Lumina 5">
+    <img src="assets/LUMINA-SITI (6).png" alt="Lumina 6">
+    <img src="assets/LUMINA-SITI (7).png" alt="Lumina 7">
+    <img src="assets/LUMINA-SITI (8).png" alt="Lumina 8">
+    <img src="assets/ROOT TASK-SITI NURJANAH.png" alt="Root">
+    <img src="assets/Avirtech Task-Siti Nurjanah (1).png" alt="Avirtech 1">
+    <img src="assets/Avirtech Task-Siti Nurjanah.png" alt="Avirtech">
+    <img src="assets/BOOGALOO JAKARTA-SITI (1).png" alt="Boogaloo 1">
+    <img src="assets/BOOGALOO JAKARTA-SITI (2).png" alt="Boogaloo 2">
+    <img src="assets/BOOGALOO JAKARTA-SITI (4).png" alt="Boogaloo 4">
+    <img src="assets/BOOGALOO JAKARTA-SITI (5).png" alt="Boogaloo 5">
+    <img src="assets/BOOGALOO JAKARTA-SITI.png" alt="Boogaloo">
+    <img src="assets/Arya Sport Center Task - Siti.png" alt="Arya Sport Center">
+    <img src="assets/pictures/get (1).jpeg" alt="">
+    <img src="assets/pictures/get (2).jpeg" alt="">
     <img src="assets/pictures/get.jpeg" alt="">
     <img src="assets/pictures/ROOT TASK-SITI NURJANAH.png" alt="">
-    <!-- Add all other images -->
   </div>
 
   <!-- VIDEOS -->
-  <div id="videos" class="grid">
-    <video controls src="assets/videos/15 seconds to the perfect tan – quick, easy, and flawless✨ Packed with nourishing ingredients fo.mp4"></video> 
-    <video controls src="assets/videos/Arya Sport Center Task - Siti (3).mp4"></video> 
-    <video controls src="assets/videos/Arya Sport Center Task - Siti (4).mp4"></video> 
-    <video controls src="assets/videos/Arya Sport Center Task - Siti (5).mp4"></video> 
-    <video controls src="assets/videos/Arya Sport Center Task - Siti (6).mp4"></video> 
-    <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (2).mp4"></video> 
-    <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (3).mp4"></video> 
-    <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (6).mp4"></video> 
-    <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (7).mp4"></video> 
-    <video controls src="assets/videos/BOOGALOO JAKARTA-SITI (1).mp4"></video> 
-    <video controls src="assets/videos/BOOGALOO JAKARTA-SITI (2).mp4"></video> 
-    <video controls src="assets/videos/BOOGALOO JAKARTA-SITI.mp4"></video> 
-    <video controls src="assets/videos/Golden hour makes your problem go away✨Make most out your session of sun with kokobum tanning oi.mp4"></video> 
-    <video controls src="assets/videos/LUMINA-SITI (4).mp4"></video> 
-    <video controls src="assets/videos/LUMINA-SITI (5).mp4"></video> 
-    <video controls src="assets/videos/LUMINA-SITI (6).mp4"></video> 
-    <video controls src="assets/videos/LUMINA-SITI (7).mp4"></video> 
-    <video controls src="assets/videos/LUMINA-SITI (8).mp4"></video> 
-    <video controls src="assets/videos/LUMINA-SITI.mp4"></video> 
-    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (1).mp4"></video> 
-    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (2).mp4"></video> 
-    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (3).mp4"></video> 
-    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (4).mp4"></video> 
-    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (6).mp4"></video> 
-    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (7).mp4"></video> 
-    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH.mp4"></video> 
+  <div id="videos" class="section videos-grid">
+    <video controls src="assets/videos/15 seconds to the perfect tan – quick, easy, and flawless✨ Packed with nourishing ingredients fo.mp4"></video>
+    <video controls src="assets/videos/Arya Sport Center Task - Siti (3).mp4"></video>
+    <video controls src="assets/videos/Arya Sport Center Task - Siti (4).mp4"></video>
+    <video controls src="assets/videos/Arya Sport Center Task - Siti (5).mp4"></video>
+    <video controls src="assets/videos/Arya Sport Center Task - Siti (6).mp4"></video>
+    <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (2).mp4"></video>
+    <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (3).mp4"></video>
+    <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (6).mp4"></video>
+    <video controls src="assets/videos/Avirtech Task-Siti Nurjanah (7).mp4"></video>
+    <video controls src="assets/videos/BOOGALOO JAKARTA-SITI (1).mp4"></video>
+    <video controls src="assets/videos/BOOGALOO JAKARTA-SITI (2).mp4"></video>
+    <video controls src="assets/videos/BOOGALOO JAKARTA-SITI.mp4"></video>
+    <video controls src="assets/videos/Golden hour makes your problem go away✨Make most out your session of sun with kokobum tanning oi.mp4"></video>
+    <video controls src="assets/videos/LUMINA-SITI (4).mp4"></video>
+    <video controls src="assets/videos/LUMINA-SITI (5).mp4"></video>
+    <video controls src="assets/videos/LUMINA-SITI (6).mp4"></video>
+    <video controls src="assets/videos/LUMINA-SITI (7).mp4"></video>
+    <video controls src="assets/videos/LUMINA-SITI (8).mp4"></video>
+    <video controls src="assets/videos/LUMINA-SITI.mp4"></video>
+    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (1).mp4"></video>
+    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (2).mp4"></video>
+    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (3).mp4"></video>
+    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (4).mp4"></video>
+    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (6).mp4"></video>
+    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH (7).mp4"></video>
+    <video controls src="assets/videos/ROOT TASK-SITI NURJANAH.mp4"></video>
     <video controls src="assets/videos/🎄✨ Merry Christmas, Sunseekers! ✨🎄May your holidays be glowing and golden, just like your perf.mp4"></video>
-    <!-- Add all other videos -->
   </div>
 
   <!-- NARRATIVES -->
-  <div id="narratives" class="grid links">
+  <div id="narratives" class="section links">
     <a href="https://inipunyasiti.wordpress.com/" target="_blank">WordPress</a>
     <a href="https://medium.com/@inipunyasiti" target="_blank">Medium</a>
     <a href="https://dietpartner.id/author/siti-nurjanah/" target="_blank">DietPartner</a>
@@ -227,7 +209,7 @@
 
   <script>
     function showSection(id) {
-      document.querySelectorAll('.grid').forEach(g => g.classList.remove('active'));
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
   </script>
