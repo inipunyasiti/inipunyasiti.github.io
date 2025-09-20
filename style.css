@@ -6,9 +6,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f5f5f7;  /* mirip background macOS */
+  color: #1d1d1f;
   line-height: 1.6;
   padding: 20px;
 }
@@ -16,16 +16,19 @@ body {
 /* Judul */
 h1 {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.8em;
+  font-weight: 600;
   margin-bottom: 10px;
-  color: #222;
+  color: #1d1d1f;
+  letter-spacing: -0.5px;
 }
 
 h2 {
   text-align: center;
   font-size: 1.8em;
+  font-weight: 500;
   margin: 40px 0 20px;
-  color: #444;
+  color: #3a3a3c;
 }
 
 /* Bio */
@@ -33,7 +36,7 @@ h2 {
   text-align: center;
   margin-bottom: 40px;
   font-size: 1.2em;
-  color: #555;
+  color: #515154;
 }
 
 /* Tombol section */
@@ -46,27 +49,30 @@ h2 {
 }
 
 .section-btn {
-  padding: 12px 24px;
-  border-radius: 8px;
-  background: #007aff;
+  padding: 12px 28px;
+  border-radius: 12px;
+  background: #0071e3; /* Apple blue */
   color: #fff;
   cursor: pointer;
   font-size: 1em;
   border: none;
-  transition: background 0.3s ease;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .section-btn:hover {
-  background: #005fcc;
+  background: #005bb5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Gallery umum */
 .gallery {
   display: none;
   column-count: 3;        /* gaya pinterest */
-  column-gap: 16px;
+  column-gap: 20px;
   margin: 20px auto;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .gallery.active {
@@ -77,17 +83,18 @@ h2 {
 .gallery img,
 .gallery video {
   width: 100%;
-  margin-bottom: 16px;
-  border-radius: 8px;
+  margin-bottom: 20px;
+  border-radius: 14px;
   display: block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  background: #fff;
 }
 
 .gallery img:hover,
 .gallery video:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
 /* Untuk link artikel */
@@ -95,4 +102,11 @@ h2 {
   display: inline-block;
   width: 100%;
   break-inside: avoid; /* biar nggak pecah di grid */
+  text-decoration: none;
+  color: #0071e3;
+  font-weight: 500;
+}
+
+.gallery a:hover {
+  text-decoration: underline;
 }
