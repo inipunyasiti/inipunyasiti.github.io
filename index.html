@@ -3,206 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inipuniyasiti Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f3f3f3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      width: 95%;
-      max-width: 900px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      padding: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .header h1 {
-      font-size: 2rem;
-      margin: 0;
-    }
-
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
-    .slide {
-      min-width: 100%;
-      padding: 20px;
-    }
-
-    .slide h2 {
-      font-size: 1.6rem;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .polaroid {
-      background: white;
-      padding: 10px 10px 25px 10px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-      border-radius: 5px;
-      transform: rotate(var(--rotate));
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .polaroid img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 5px;
-      display: block;
-    }
-
-    .polaroid:hover {
-      transform: scale(1.05) rotate(0deg);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.3);
-    }
-
-    .controls {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 15px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background: #333;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #555;
-    }
-  </style>
+  <title>Inipunyasiti Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class=
-  "profile">
-  <img src="assets/profile.jpg" alt="My Profile" class="profile-pic">
-  <div class="profile-info">
-    <h2>Siti Nurjanah</h2>
-    <p>Digital storyteller ✦ Writing, visuals & ideas ✦ Collecting little life snapshots.</p>
+
+  <!-- PROFILE -->
+  <header class="profile">
+    <img src="https://avatars.githubusercontent.com/inipunyasiti" alt="Profile" class="profile-pic">
+    <div class="profile-info">
+      <h1>Inipunyasiti</h1>
+      <p class="bio">I craft content that hooks, informs, and lingers—marketing, copy, storytelling, you name it.</p>
+      <p class="email">📧 inipunyasiti@gmail.com</p>
+    </div>
+  </header>
+
+  <!-- TITLE -->
+  <h2 class="main-title" id="section-title">Unnecessary Pictures</h2>
+
+  <!-- SLIDER NAV -->
+  <div class="slider-nav">
+    <button onclick="showSlide(0, 'Unnecessary Pictures')">Unnecessary Pictures</button>
+    <button onclick="showSlide(1, 'Fluff Videos')">Fluff Videos</button>
+    <button onclick="showSlide(2, 'Nose Noses Narratives')">Nose Noses Narratives</button>
   </div>
-</div>
 
-  <div class="container">
-    <div class="header">
-      <h1 id="slideTitle">Unnecessary Pictures</h1>
-    </div>
+  <!-- SLIDES -->
+  <div class="slides">
 
-    <div class="slider" id="slider">
-      <!-- Slide 1 -->
-      <div class="slide">
-        <h2>Unnecessary Pictures</h2>
-        <div class="gallery">
-          <div class="polaroid" style="--rotate: -5deg;">
-            <img src="assets/pictures/Arya Sport Center Task - Siti (2).png" alt="">
-          </div>
-          <div class="polaroid" style="--rotate: 3deg;">
-            <img src="assets/pictures/Arya Sport Center Task - Siti (4).png" alt="">
-          </div>
-          <div class="polaroid" style="--rotate: -2deg;">
-           <img src="assets/pictures/Bronzed moment with Kokobum☀️Nothing compared after you delevoped a perfect tanMade from natura.webp" alt="">
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="slide">
-        <h2>Fluff Videos</h2>
-        <div class="gallery">
-          <div class="polaroid" style="--rotate: 4deg;">
-            <video controls src="assets/videos/15 seconds to the perfect tan – quick, easy, and flawless✨ Packed with nourishing ingredients fo.mp4"></video>
-          </div>
-          <div class="polaroid" style="--rotate: -6deg;">
-            <video controls src="assets/videos/Arya Sport Center Task - Siti (3).mp4"></video>
-          </div>
-          <div class="polaroid" style="--rotate: 2deg;">
-           <video controls src="assets/videos/BOOGALOO JAKARTA-SITI.mp4"></video>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="slide">
-        <h2>Nose Noses Narratives</h2>
-        <div class="gallery">
-          <div class="polaroid" style="--rotate: -4deg;">
-            <a href="https://dietpartner.id/author/siti-nurjanah/" target="_blank">DietPartner</a>
-          </div>
-          <div class="polaroid" style="--rotate: 5deg;">
-            <a href="https://campusnet.news/author/siti-nurjanah/" target="_blank">CampusNet</a>
-          </div>
-          <div class="polaroid" style="--rotate: -3deg;">
-            <a href="https://optima.web.id/id/author/siti-nurjanah/" target="_blank">Optima Media</a>
-          </div>
-        </div>
+    <!-- Pictures -->
+    <div class="slide active">
+      <div class="content-grid">
+        <img src="assets/pictures/Arya Sport Center Task - Siti (2).png" alt="">
+        <img src="assets/pictures/Arya Sport Center Task - Siti (4).png" alt="">
+        <img src="assets/LUMINA-SITI (1).png" alt="">
       </div>
     </div>
 
-    <div class="controls">
-      <button onclick="prevSlide()">◀ Prev</button>
-      <button onclick="nextSlide()">Next ▶</button>
+    <!-- Videos -->
+    <div class="slide">
+      <div class="content-grid">
+        <video controls src="assets/videos/Arya Sport Center Task - Siti (3).mp4"></video>
+        <video controls src="assets/videos/LUMINA-SITI.mp4"></video>
+      </div>
     </div>
+
+    <!-- Narratives -->
+    <div class="slide">
+      <div class="content-grid">
+        <a href="https://inipunyasiti.wordpress.com/" target="_blank">WordPress</a>
+        <a href="https://medium.com/@inipunyasiti" target="_blank">Medium</a>
+        <a href="https://campusnet.news/author/siti-nurjanah/" target="_blank">CampusNet</a>
+      </div>
+    </div>
+
   </div>
 
   <script>
-    const slider = document.getElementById("slider");
-    const titles = ["Unnecessary Pictures", "Fluff Videos", "Nose Noses Narratives"];
-    let currentIndex = 0;
+    function showSlide(index, title) {
+      const slides = document.querySelectorAll(".slide");
+      slides.forEach((s, i) => {
+        s.classList.remove("active");
+        if (i === index) s.classList.add("active");
+      });
 
-    function updateTitle() {
-      document.getElementById("slideTitle").textContent = titles[currentIndex];
-    }
-
-    function nextSlide() {
-      if (currentIndex < titles.length - 1) {
-        currentIndex++;
-      } else {
-        currentIndex = 0;
-      }
-      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-      updateTitle();
-    }
-
-    function prevSlide() {
-      if (currentIndex > 0) {
-        currentIndex--;
-      } else {
-        currentIndex = titles.length - 1;
-      }
-      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-      updateTitle();
+      // update title
+      document.getElementById("section-title").innerText = title;
     }
   </script>
+
 </body>
 </html>
