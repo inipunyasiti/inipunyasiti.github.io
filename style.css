@@ -1,18 +1,104 @@
-.preview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 95%;
+  max-width: 900px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 20px;
+}
+
+.slide h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  max-width: 1200px;
-  margin: 20px auto;
+  justify-content: center;
 }
 
-.preview-grid img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease;
+.polaroid {
+  background: white;
+  padding: 10px 10px 25px 10px; /* bawah lebih panjang (efek polaroid) */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  transform: rotate(var(--rotate));
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
-.preview-grid img:hover {
-  transform: scale(1.03);
+.polaroid img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
+
+.polaroid p {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #555;
+  font-style: italic;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #555;
 }
