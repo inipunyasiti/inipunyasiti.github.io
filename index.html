@@ -3,185 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siti's Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fafafa;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Profile section */
-    .profile {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .profile img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-    .profile h1 {
-      font-size: 20px;
-      margin: 5px 0;
-    }
-    .profile p {
-      font-size: 14px;
-      color: #333;
-      margin: 5px 0;
-    }
-    .profile a {
-      font-size: 14px;
-      color: #3897f0;
-      text-decoration: none;
-    }
-
-    /* Feed grid */
-    .feed {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3px;
-      width: 100%;
-      max-width: 900px;
-    }
-    .feed-item {
-      aspect-ratio: 1/1;
-      background-size: cover;
-      background-position: center;
-      cursor: pointer;
-    }
-
-    /* Special buttons */
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: white;
-      font-size: 14px;
-      text-align: center;
-    }
-    .btn-pink { background: hotpink; }
-    .btn-blue { background: #0077ff; }
-    .btn-black { background: #111; }
-
-    /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.9);
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      z-index: 1000;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 80%;
-      margin: 10px;
-    }
-    .lightbox-close {
-      color: white;
-      font-size: 24px;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      cursor: pointer;
-    }
-  </style>
+  <title>Siti’s Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <img src="profile.jpg" alt="Profile" class="profile-pic">
+    <h1>Siti Nurjanah</h1>
+    <p class="desc">
+      Craft content that hooks, informs, and lingers—marketing, copy, storytelling, you name it.  
+      📧 <a href="mailto:inipunyasiti@gmail.com">inipunyasiti@gmail.com</a>
+    </p>
+  </header>
 
-  <!-- Profile -->
-  <div class="profile">
-    <img src="profile.jpg" alt="Profile Picture">
-    <h1>Unnecessary Pictures, Fluff Videos, and Noses Narratives</h1>
-    <p>Craft content that hooks, informs, and lingers—marketing, copy, storytelling, you name it.</p>
-    <a href="mailto:inipunyasiti@gmail.com">inipunyasiti@gmail.com</a>
+  <main class="menu">
+    <button onclick="openLightbox('pics')" class="btn pink">Unnecessary Pictures</button>
+    <button onclick="openLightbox('videos')" class="btn blue">Fluff Videos</button>
+    <button onclick="openLightbox('noses')" class="btn green">Noses Noses Narratives</button>
+  </main>
+
+  <!-- Lightbox Unnecessary Pictures -->
+  <div class="lightbox" id="lightbox-pics">
+    <span class="lightbox-close" onclick="closeLightbox('pics')">&times;</span>
+    <div class="lightbox-scroll">
+      <!-- Semua foto Unnecessary Pictures -->
+      <img src="A beautiful tan deserves perfect protection 🌞✨ Keep your glow radiant and safe with Kokobum. Th.jpg" alt="">
+      <img src="Arya Sport Center Task - Siti (2).png" alt="">
+      <img src="Arya Sport Center Task - Siti (4).png" alt="">
+      <img src="Arya Sport Center Task - Siti.png" alt="">
+      <img src="Avirtech Task-Siti Nurjanah (1).png" alt="">
+      <img src="Avirtech Task-Siti Nurjanah.png" alt="">
+      <img src="BOOGALOO JAKARTA-SITI (1).png" alt="">
+      <img src="BOOGALOO JAKARTA-SITI (2).png" alt="">
+      <img src="BOOGALOO JAKARTA-SITI (4).png" alt="">
+      <img src="BOOGALOO JAKARTA-SITI (5).png" alt="">
+      <img src="BOOGALOO JAKARTA-SITI.png" alt="">
+      <img src="Bronzed moment with Kokobum☀️Nothing compared after you delevoped a perfect tanMade from natura.webp" alt="">
+      <img src="Girls under the sun—confident and protected 🌞 With Kokobum’s UV protection, enjoy the sun and k.jpg" alt="">
+      <img src="Gorgeous girl loves a perfect tan!Level up your tan and unlock your natural summer tan 🌞KokoBu.webp" alt="">
+      <img src="Kokobum Tanning Oil is your go-to companion for sunny days!Get that sun-kissed glow effortlessly.jpg" alt="">
+      <img src="Kokobum Tanning Oil is your go-to companion for sunny days!Get that sun-kissed glow effortlessly (1).jpg" alt="">
+      <img src="LUMINA-SITI (1).png" alt="">
+      <img src="LUMINA-SITI (2).png" alt="">
+      <img src="LUMINA-SITI (3).png" alt="">
+      <img src="LUMINA-SITI (4).png" alt="">
+      <img src="LUMINA-SITI (5).png" alt="">
+      <img src="LUMINA-SITI (6).png" alt="">
+      <img src="LUMINA-SITI (7).png" alt="">
+      <img src="LUMINA-SITI (8).png" alt="">
+      <img src="LUMINA-SITI.png" alt="">
+      <img src="Peek inside the secret ingredients of our Frangipani tanning oil!Inside every bottle lies a nour.jpg" alt="">
+      <img src="ROOT TASK-SITI NURJANAH.png" alt="">
+      <img src="Sharing is caring, especially during the most wonderful time of the year!Give the gift of a perf.jpg" alt="">
+      <img src="Start a proper way to achieving your tan goals ❣️Each Bottle of Kokobum not only moisturizes you.jpg" alt="">
+      <img src="Tan line goals with Kokobum Tanning Oil 🌞✨ Achieve the perfect sun-kissed glow with a formula t.jpg" alt="">
+      <img src="That feeling when your skin achieve best tanDiscover our a perfect self tanner and achieve flawl.jpg" alt="">
+      <img src="The secret to the most healthy glow is here!Kokobum Tanning Oil is made from coconut power that (1).jpg" alt="">
+      <img src="Your summer essential is here!Spend your summer tanning with a product that truly cares for your.jpg" alt="">
+      <img src="get.jpeg" alt="">
+      <img src="get (1).jpeg" alt="">
+      <img src="get (2).jpeg" alt="">
+    </div>
   </div>
 
-  <!-- Feed -->
-  <div class="feed">
-    <div class="feed-item btn btn-pink" onclick="openLightbox('pics')">Unnecessary Pictures</div>
-    <div class="feed-item" style="background-image: url('assets1.jpg')"></div>
-    <div class="feed-item" style="background-image: url('assets2.jpg')"></div>
-    <div class="feed-item" style="background-image: url('assets3.jpg')"></div>
-    <div class="feed-item btn btn-blue" onclick="openLightbox('videos')">Fluff Videos</div>
-    <div class="feed-item" style="background-image: url('assets4.jpg')"></div>
-    <div class="feed-item" style="background-image: url('assets5.jpg')"></div>
-    <div class="feed-item" style="background-image: url('assets6.jpg')"></div>
-    <div class="feed-item btn btn-black" onclick="openLightbox('noses')">Noses Noses Narratives</div>
-  </div>
-
-  <!-- Lightboxes -->
- <div class="lightbox" id="lightbox-pics">
-  <span class="lightbox-close" onclick="closeLightbox('pics')">&times;</span>
-    <img src="A beautiful tan deserves perfect protection 🌞✨ Keep your glow radiant and safe with Kokobum. Th.jpg" alt="">
-  <img src="Arya Sport Center Task - Siti (2).png" alt="">
-  <img src="Arya Sport Center Task - Siti (4).png" alt="">
-  <img src="Arya Sport Center Task - Siti.png" alt="">
-  <img src="Avirtech Task-Siti Nurjanah (1).png" alt="">
-  <img src="Avirtech Task-Siti Nurjanah.png" alt="">
-  <img src="BOOGALOO JAKARTA-SITI (1).png" alt="">
-  <img src="BOOGALOO JAKARTA-SITI (2).png" alt="">
-  <img src="BOOGALOO JAKARTA-SITI (4).png" alt="">
-  <img src="BOOGALOO JAKARTA-SITI (5).png" alt="">
-  <img src="BOOGALOO JAKARTA-SITI.png" alt="">
-  <img src="Bronzed moment with Kokobum☀️Nothing compared after you delevoped a perfect tanMade from natura.webp" alt="">
-  <img src="Girls under the sun—confident and protected 🌞 With Kokobum’s UV protection, enjoy the sun and k.jpg" alt="">
-  <img src="Gorgeous girl loves a perfect tan!Level up your tan and unlock your natural summer tan 🌞KokoBu.webp" alt="">
-  <img src="Kokobum Tanning Oil is your go-to companion for sunny days!Get that sun-kissed glow effortlessly.jpg" alt="">
-  <img src="Kokobum Tanning Oil is your go-to companion for sunny days!Get that sun-kissed glow effortlessly (1).jpg" alt="">
-  <img src="LUMINA-SITI (1).png" alt="">
-  <img src="LUMINA-SITI (2).png" alt="">
-  <img src="LUMINA-SITI (3).png" alt="">
-  <img src="LUMINA-SITI (4).png" alt="">
-  <img src="LUMINA-SITI (5).png" alt="">
-  <img src="LUMINA-SITI (6).png" alt="">
-  <img src="LUMINA-SITI (7).png" alt="">
-  <img src="LUMINA-SITI (8).png" alt="">
-  <img src="LUMINA-SITI.png" alt="">
-  <img src="Peek inside the secret ingredients of our Frangipani tanning oil!Inside every bottle lies a nour.jpg" alt="">
-  <img src="ROOT TASK-SITI NURJANAH.png" alt="">
-  <img src="Sharing is caring, especially during the most wonderful time of the year!Give the gift of a perf.jpg" alt="">
-  <img src="Start a proper way to achieving your tan goals ❣️Each Bottle of Kokobum not only moisturizes you.jpg" alt="">
-  <img src="Tan line goals with Kokobum Tanning Oil 🌞✨ Achieve the perfect sun-kissed glow with a formula t.jpg" alt="">
-  <img src="That feeling when your skin achieve best tanDiscover our a perfect self tanner and achieve flawl.jpg" alt="">
-  <img src="The secret to the most healthy glow is here!Kokobum Tanning Oil is made from coconut power that (1).jpg" alt="">
-  <img src="Your summer essential is here!Spend your summer tanning with a product that truly cares for your.jpg" alt="">
-  <img src="get.jpeg" alt="">
-  <img src="get (1).jpeg" alt="">
-  <img src="get (2).jpeg" alt="">
-  </div>
-</div>
-
+  <!-- Lightbox Fluff Videos -->
   <div class="lightbox" id="lightbox-videos">
     <span class="lightbox-close" onclick="closeLightbox('videos')">&times;</span>
-    <video controls src="video1.mp4" style="max-width:90%; max-height:80%;"></video>
+    <div class="lightbox-scroll">
+      <!-- Semua video Fluff -->
+      <video src="15 seconds to the perfect tan – quick, easy, and flawless✨ Packed with nourishing ingredients fo.mp4" controls></video>
+      <video src="Arya Sport Center Task - Siti (3).mp4" controls></video>
+      <video src="Arya Sport Center Task - Siti (4).mp4" controls></video>
+      <video src="Arya Sport Center Task - Siti (5).mp4" controls></video>
+      <video src="Arya Sport Center Task - Siti (6).mp4" controls></video>
+      <video src="Avirtech Task-Siti Nurjanah (2).mp4" controls></video>
+      <video src="Avirtech Task-Siti Nurjanah (3).mp4" controls></video>
+      <video src="Avirtech Task-Siti Nurjanah (6).mp4" controls></video>
+      <video src="Avirtech Task-Siti Nurjanah (7).mp4" controls></video>
+      <video src="BOOGALOO JAKARTA-SITI (1).mp4" controls></video>
+      <video src="BOOGALOO JAKARTA-SITI (2).mp4" controls></video>
+      <video src="BOOGALOO JAKARTA-SITI.mp4" controls></video>
+      <video src="Golden hour makes your problem go away✨Make most out your session of sun with kokobum tanning oi.mp4" controls></video>
+      <video src="LUMINA-SITI (4).mp4" controls></video>
+      <video src="LUMINA-SITI (5).mp4" controls></video>
+      <video src="LUMINA-SITI (6).mp4" controls></video>
+      <video src="LUMINA-SITI (7).mp4" controls></video>
+      <video src="LUMINA-SITI (8).mp4" controls></video>
+      <video src="LUMINA-SITI.mp4" controls></video>
+      <video src="ROOT TASK-SITI NURJANAH (1).mp4" controls></video>
+      <video src="ROOT TASK-SITI NURJANAH (2).mp4" controls></video>
+      <video src="ROOT TASK-SITI NURJANAH (3).mp4" controls></video>
+      <video src="ROOT TASK-SITI NURJANAH (4).mp4" controls></video>
+      <video src="ROOT TASK-SITI NURJANAH (6).mp4" controls></video>
+      <video src="ROOT TASK-SITI NURJANAH (7).mp4" controls></video>
+      <video src="ROOT TASK-SITI NURJANAH.mp4" controls></video>
+      <video src="🎄✨ Merry Christmas, Sunseekers! ✨🎄May your holidays be glowing and golden, just like your perf.mp4" controls></video>
+    </div>
   </div>
 
+  <!-- Lightbox Noses Noses Narratives -->
   <div class="lightbox" id="lightbox-noses">
     <span class="lightbox-close" onclick="closeLightbox('noses')">&times;</span>
-    <img src="noses1.jpg" alt="">
-    <img src="noses2.jpg" alt="">
+    <div class="lightbox-scroll">
+      <p style="color:white; text-align:center;">✨ Noses Noses Narratives Coming Soon ✨</p>
+    </div>
   </div>
 
   <script>
-    function openLightbox(type) {
-      document.getElementById("lightbox-" + type).style.display = "flex";
+    function openLightbox(id) {
+      document.getElementById("lightbox-" + id).style.display = "block";
     }
-    function closeLightbox(type) {
-      document.getElementById("lightbox-" + type).style.display = "none";
+    function closeLightbox(id) {
+      document.getElementById("lightbox-" + id).style.display = "none";
     }
   </script>
-
 </body>
 </html>
