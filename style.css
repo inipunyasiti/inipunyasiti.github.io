@@ -1,18 +1,18 @@
-.section {
-  display: none; /* hide by default */
-  margin-top: 20px;
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 
-.tabs button {
-  margin: 5px;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 6px;
-  background: black;
-  color: white;
-  cursor: pointer;
+.preview-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
 }
 
-.tabs button:hover {
-  background: gray;
+.preview-grid img:hover {
+  transform: scale(1.03);
 }
