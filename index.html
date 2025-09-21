@@ -3,73 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inipunyasiti Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Siti's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    /* Profile Section */
+    .profile {
+      text-align: center;
+      padding: 30px 20px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .profile h1 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+    .profile p {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .profile a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    /* Carousel */
+    .carousel {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto 50px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background: white;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slide {
+      min-width: 100%;
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Buttons */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 50%;
+    }
+    .carousel-btn.prev { left: 15px; }
+    .carousel-btn.next { right: 15px; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .profile h1 { font-size: 1.3rem; }
+      .profile p { font-size: 0.9rem; }
+      .section-title { font-size: 1.2rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- PROFILE -->
-  <header class="profile">
-    <img src="https://avatars.githubusercontent.com/inipunyasiti" alt="Profile" class="profile-pic">
-    <div class="profile-info">
-      <h1>Inipunyasiti</h1>
-      <p class="bio">I craft content that hooks, informs, and lingers—marketing, copy, storytelling, you name it.</p>
-      <p class="email">📧 inipunyasiti@gmail.com</p>
-    </div>
-  </header>
-
-  <!-- TITLE -->
-  <h2 class="main-title" id="section-title">Unnecessary Pictures</h2>
-
-  <!-- SLIDER NAV -->
-  <div class="slider-nav">
-    <button onclick="showSlide(0, 'Unnecessary Pictures')">Unnecessary Pictures</button>
-    <button onclick="showSlide(1, 'Fluff Videos')">Fluff Videos</button>
-    <button onclick="showSlide(2, 'Nose Noses Narratives')">Nose Noses Narratives</button>
+  <!-- Profile Section -->
+  <div class="profile">
+    <img src="assets/profile.jpg" alt="Siti Profile Picture">
+    <h1>Siti Nurjanah</h1>
+    <p>Craft content that hooks, informs, and lingers — marketing, copy, storytelling, you name it.</p>
+    <p><a href="mailto:inipunyasiti@gmail.com">inipunyasiti@gmail.com</a></p>
   </div>
 
-  <!-- SLIDES -->
-  <div class="slides">
+  <!-- Title -->
+  <div class="section-title">Unnecessary Pictures, Fluff Videos, and Noses Nodes</div>
 
-    <!-- Pictures -->
-    <div class="slide active">
-      <div class="content-grid">
-        <img src="assets/pictures/Arya Sport Center Task - Siti (2).png" alt="">
-        <img src="assets/pictures/Arya Sport Center Task - Siti (4).png" alt="">
-        <img src="assets/LUMINA-SITI (1).png" alt="">
-      </div>
+  <!-- Carousel -->
+  <div class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-slide"><img src="assets/pic1.jpg" alt="Portfolio Image 1"></div>
+      <div class="carousel-slide"><img src="assets/pic2.jpg" alt="Portfolio Image 2"></div>
+      <div class="carousel-slide"><img src="assets/pic3.jpg" alt="Portfolio Image 3"></div>
     </div>
-
-    <!-- Videos -->
-    <div class="slide">
-      <div class="content-grid">
-        <video controls src="assets/videos/Arya Sport Center Task - Siti (3).mp4"></video>
-        <video controls src="assets/videos/LUMINA-SITI.mp4"></video>
-      </div>
-    </div>
-
-    <!-- Narratives -->
-    <div class="slide">
-      <div class="content-grid">
-        <a href="https://inipunyasiti.wordpress.com/" target="_blank">WordPress</a>
-        <a href="https://medium.com/@inipunyasiti" target="_blank">Medium</a>
-        <a href="https://campusnet.news/author/siti-nurjanah/" target="_blank">CampusNet</a>
-      </div>
-    </div>
-
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
   </div>
 
   <script>
-    function showSlide(index, title) {
-      const slides = document.querySelectorAll(".slide");
-      slides.forEach((s, i) => {
-        s.classList.remove("active");
-        if (i === index) s.classList.add("active");
-      });
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+    let currentIndex = 0;
 
-      // update title
-      document.getElementById("section-title").innerText = title;
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
   </script>
 
 </body>
