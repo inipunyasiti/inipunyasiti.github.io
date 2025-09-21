@@ -1,38 +1,81 @@
-.main-title {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
   text-align: center;
-  color: #222;
-}
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 25px;
-  padding: 15px;
-  background: #fafafa;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  padding: 20px;
 }
 
+/* Profile */
+header {
+  margin-bottom: 20px;
+}
 .profile-pic {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ddd;
+  border: 3px solid hotpink;
+}
+.desc {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
 }
 
-.profile-info h2 {
-  margin: 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #333;
+/* Menu Buttons */
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+.btn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s;
+}
+.btn:hover { transform: scale(1.05); }
+.pink { background: hotpink; }
+.blue { background: #3498db; }
+.green { background: #2ecc71; }
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.95);
+  z-index: 1000;
+  padding-top: 20px;
 }
 
-.profile-info p {
-  margin: 5px 0 0;
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.4;
+.lightbox-close {
+  position: absolute;
+  top: 10px; right: 20px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+.lightbox-scroll {
+  max-height: 90%;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.lightbox img, .lightbox video {
+  max-width: 90%;
+  margin: 15px auto;
+  display: block;
+  border-radius: 6px;
 }
