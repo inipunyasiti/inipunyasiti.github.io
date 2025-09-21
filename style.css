@@ -1,112 +1,18 @@
-/* Reset sederhana */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.section {
+  display: none; /* hide by default */
+  margin-top: 20px;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: #f5f5f7;  /* mirip background macOS */
-  color: #1d1d1f;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-/* Judul */
-h1 {
-  text-align: center;
-  font-size: 2.8em;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #1d1d1f;
-  letter-spacing: -0.5px;
-}
-
-h2 {
-  text-align: center;
-  font-size: 1.8em;
-  font-weight: 500;
-  margin: 40px 0 20px;
-  color: #3a3a3c;
-}
-
-/* Bio */
-.bio {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 1.2em;
-  color: #515154;
-}
-
-/* Tombol section */
-.section-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
-
-.section-btn {
-  padding: 12px 28px;
-  border-radius: 12px;
-  background: #0071e3; /* Apple blue */
-  color: #fff;
-  cursor: pointer;
-  font-size: 1em;
+.tabs button {
+  margin: 5px;
+  padding: 10px 15px;
   border: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.section-btn:hover {
-  background: #005bb5;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* Gallery umum */
-.gallery {
-  display: none;
-  column-count: 3;        /* gaya pinterest */
-  column-gap: 20px;
-  margin: 20px auto;
-  max-width: 1100px;
-}
-
-.gallery.active {
-  display: block;
-}
-
-/* Item dalam gallery */
-.gallery img,
-.gallery video {
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 14px;
-  display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 6px;
+  background: black;
+  color: white;
   cursor: pointer;
-  background: #fff;
 }
 
-.gallery img:hover,
-.gallery video:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-}
-
-/* Untuk link artikel */
-.gallery a {
-  display: inline-block;
-  width: 100%;
-  break-inside: avoid; /* biar nggak pecah di grid */
-  text-decoration: none;
-  color: #0071e3;
-  font-weight: 500;
-}
-
-.gallery a:hover {
-  text-decoration: underline;
+.tabs button:hover {
+  background: gray;
 }
