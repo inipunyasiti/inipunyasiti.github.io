@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1160">
+<meta name="description" content="Siti Nurjanah: graphic designer and digital marketer based in Bali. Resume and portfolio.">
+<title>Siti Nurjanah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Reenie+Beanie&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: Japanese lifestyle-magazine issue. Cover → contents → features → catalog spreads → back cover. Deliberate single print look. */
+:root{
+  --paper:#FBFBF8; --ink:#141414; --soft:#5B5B57; --rule:#141414; --hair:#D9D8D2;
+  --red:#E3262B; --blue:#1F49D6; --yellow:#FFE14D; --pink:#FFC9D6;
+  --f-mast:"Dela Gothic One","Arial Black",Impact,sans-serif;
+  --f-body:"Zen Kaku Gothic New","Helvetica Neue",Arial,sans-serif;
+  --f-hand:"Reenie Beanie","Comic Sans MS",cursive;
+  --f-mono:"DM Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:20px 48px}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.mono{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+.hand{font-family:var(--f-hand);font-size:28px;line-height:1;color:var(--blue)}
+.hl{background:linear-gradient(transparent 55%,var(--yellow) 55%)}
+
+/* ===== COVER ===== */
+.cover{position:relative;background:var(--red);color:var(--paper);border:3px solid var(--ink);padding:clamp(18px,3vw,32px);overflow:hidden;display:grid;gap:18px}
+.cover-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--paper);padding-bottom:10px}
+.mast{font-family:var(--f-mast);font-size:clamp(56px,11vw,132px);line-height:.85;letter-spacing:-.01em;margin:0;color:var(--paper);text-shadow:4px 4px 0 var(--ink)}
+.mast-sub{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:-4px}
+.mast-sub .jp{font-weight:900;font-size:clamp(18px,2.6vw,26px);letter-spacing:.12em}
+.mast-sub .tag{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:3px 8px}
+.cover-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:end}
+.coverlines{display:grid;gap:14px}
+.cl-big{font-family:var(--f-mast);font-size:clamp(24px,3.2vw,38px);line-height:1;margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.cl-big span{background:var(--paper);color:var(--red);padding:.12em .3em .16em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.cl{font-weight:700;font-size:clamp(15px,1.6vw,18px);line-height:1.35;margin:0;max-width:38ch}
+.cl b{font-family:var(--f-mast);font-weight:400;font-size:1.25em;margin-right:6px}
+.cover-right{display:grid;gap:12px;justify-items:end;text-align:right}
+.sticker{width:clamp(120px,15vw,150px);aspect-ratio:1;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-content:center;text-align:center;transform:rotate(12deg);border:3px solid var(--ink);font-family:var(--f-mast);line-height:.95;font-size:clamp(20px,2.4vw,26px);box-shadow:4px 4px 0 var(--ink)}
+.sticker small{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;margin-top:6px}
+.cover-right .cl{text-align:right}
+.barcode{display:flex;gap:2px;height:34px;align-items:stretch;background:var(--paper);padding:5px 7px}
+.barcode i{display:block;background:var(--ink)}
+
+/* ===== intro strip ===== */
+.editor{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:28px;padding-block:40px;border-bottom:3px solid var(--rule)}
+.editor h2{font-family:var(--f-mast);font-weight:400;font-size:clamp(24px,3vw,34px);line-height:1.1;margin:6px 0 14px}
+.editor p{margin:0 0 .8em;max-width:60ch}
+.facts{border:2px solid var(--ink);padding:16px;display:grid;gap:10px;align-content:start;background:var(--paper);min-width:0}
+.facts .me{width:100%;aspect-ratio:1;object-fit:cover;border:2px solid var(--ink);filter:contrast(1.05)}
+.facts div{display:grid;grid-template-columns:70px minmax(0,1fr);gap:10px;border-bottom:1px dashed var(--hair);padding-bottom:8px;overflow-wrap:anywhere}
+.facts div:last-of-type{border-bottom:0}
+.copy{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:var(--paper);border:0;padding:2px 8px;margin-left:6px;cursor:pointer}
+.copy:hover{background:var(--red)}
+
+/* ===== contents ===== */
+.contents{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:28px;padding-block:40px;border-bottom:3px solid var(--rule)}
+.contents h2{font-family:var(--f-mast);font-weight:400;font-size:clamp(44px,7vw,80px);line-height:.9;margin:0;color:var(--blue)}
+.toc{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.toc li a{display:flex;align-items:baseline;gap:10px;padding-block:9px;border-bottom:1px solid var(--hair);text-decoration:none;font-weight:700}
+.toc li a:hover{color:var(--red)}
+.toc .n{font-family:var(--f-mono);font-size:12px;color:var(--red);min-width:44px}
+.toc .dots{flex:1;border-bottom:2px dotted var(--soft);transform:translateY(-4px);min-width:20px}
+.toc .p{font-family:var(--f-mono);font-size:12px}
+
+/* ===== section heads ===== */
+.spread{padding-block:48px;border-bottom:3px solid var(--rule)}
+.kicker{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.kicker .pg{font-family:var(--f-mono);font-size:12px;background:var(--ink);color:var(--paper);padding:2px 8px}
+.spread>h2{font-family:var(--f-mast);font-weight:400;font-size:clamp(40px,7.5vw,92px);line-height:.92;margin:0 0 6px;letter-spacing:-.01em}
+.spread>h2 em{font-style:normal;color:var(--red)}
+.dek{font-weight:700;font-size:clamp(16px,1.8vw,19px);max-width:56ch;margin:0 0 30px}
+
+/* ===== features ===== */
+.feats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
+.feat{grid-column:span 3;border:2px solid var(--ink);background:var(--paper);display:flex;flex-direction:column;min-width:0;position:relative}
+.feat.full{grid-column:1/-1}
+.feat.third{grid-column:span 2}
+.feat .art{position:relative;padding:20px;min-height:150px;display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px;border-bottom:2px solid var(--ink);overflow:hidden}
+.art.red{background:var(--red);color:var(--paper)}
+.art.blue{background:var(--blue);color:var(--paper)}
+.art.yellow{background:var(--yellow)}
+.art.pink{background:var(--pink)}
+.art .no{position:absolute;top:10px;left:14px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em}
+.art .huge{font-family:var(--f-mast);font-size:clamp(46px,6vw,72px);line-height:.85}
+.art .cap{font-weight:700;font-size:13px;line-height:1.3;max-width:16ch}
+.art .stat{display:grid;gap:4px}
+.lbl{display:inline-block;font-family:var(--f-mono);font-size:11px;letter-spacing:.04em;padding:4px 8px;border:1.5px solid currentColor;background:transparent}
+.lbl.solid{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.feat .txt{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.feat .where{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--red)}
+.feat h3{font-family:var(--f-mast);font-weight:400;font-size:clamp(21px,2.3vw,26px);line-height:1.12;margin:0;text-wrap:balance}
+.feat p{margin:0}
+.feat ul{margin:0;padding-left:1.1em}
+.feat li{margin-bottom:3px}
+.feat li::marker{content:"→ ";color:var(--red)}
+.feat .go{margin-top:auto;padding-top:8px;font-weight:900;text-decoration:none;color:var(--blue)}
+.feat .go:hover{text-decoration:underline}
+.note{position:absolute;right:14px;bottom:10px;transform:rotate(-6deg);font-family:var(--f-hand);font-size:26px;line-height:1}
+.art.yellow .note,.art.pink .note{color:var(--blue)}
+.browser{width:100%;max-width:240px;background:var(--paper);border:2px solid var(--ink)}
+.browser .b-top{height:14px;border-bottom:2px solid var(--ink);display:flex;gap:4px;align-items:center;padding-left:6px}
+.browser .b-top i{width:5px;height:5px;border-radius:50%;background:var(--ink)}
+.browser .b-body{padding:8px;display:grid;gap:5px}
+.browser .im{height:40px;background:var(--ink)}
+.browser .ln{height:6px;background:var(--hair)}
+.browser .ln.s{width:55%}
+
+.gallery{columns:3 240px;column-gap:18px}
+.shot{break-inside:avoid;margin:0 0 18px;border:2px solid var(--ink);background:var(--paper);box-shadow:4px 4px 0 var(--ink)}
+.shot:nth-child(3n+1){transform:rotate(-.8deg)}.shot:nth-child(4n+2){transform:rotate(.9deg)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:8px 10px;border-top:2px solid var(--ink)}
+/* ===== career map (catalog list) ===== */
+.cat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+.item{display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;padding-block:16px;border-top:2px solid var(--ink)}
+.item .idx{font-family:var(--f-mast);font-size:30px;line-height:1;color:var(--red)}
+.item h3{margin:0;font-size:17px;font-weight:900;line-height:1.3}
+.item .org{font-weight:700;color:var(--blue);font-size:14.5px}
+.item .date{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.05em;color:var(--soft);margin-top:2px}
+.item p{margin:6px 0 0;font-size:14.5px;color:var(--soft)}
+.item ul.sub{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.item ul.sub li{font-size:14px;line-height:1.5;color:var(--soft);padding-left:12px;border-left:3px solid var(--yellow)}
+.item ul.sub b{color:var(--ink);font-weight:900}
+.item .links{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px}
+.item .links a{font-weight:700;color:var(--blue);text-decoration:none;font-size:13.5px}
+.item .links a:hover{text-decoration:underline}
+.item.wide{grid-column:1/-1}
+
+/* ===== bag + reading ===== */
+.duo{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px}
+.bag{border:2px solid var(--ink);background:var(--pink);padding:22px;position:relative;min-width:0}
+.bag h3,.reading h3{font-family:var(--f-mast);font-weight:400;font-size:28px;line-height:1;margin:0 0 4px}
+.bag .hand{margin-bottom:16px;display:block}
+.things{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.thing{background:var(--paper);border:2px solid var(--ink);padding:10px;display:grid;gap:2px;min-width:0}
+.thing b{font-weight:900;font-size:14px;line-height:1.25;overflow-wrap:anywhere}
+.thing span{font-family:var(--f-mono);font-size:10px;letter-spacing:.04em;color:var(--soft);text-transform:uppercase}
+.thing:nth-child(3n+1){transform:rotate(-1.2deg)}
+.thing:nth-child(4n+2){transform:rotate(1.4deg)}
+.reading{border-top:2px solid var(--ink);padding-top:16px;min-width:0}
+.reading ol{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
+.reading li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;font-weight:500}
+.reading .y{font-family:var(--f-mono);font-size:12px;background:var(--yellow);text-align:center;height:fit-content;padding:2px 0;border:1.5px solid var(--ink)}
+.edu{margin-top:22px;border:2px solid var(--ink);padding:16px;background:var(--paper)}
+.edu b{font-family:var(--f-mast);font-weight:400;font-size:20px}
+.edu p{margin:4px 0 0;font-size:14.5px}
+
+/* ===== back cover ===== */
+.back{margin-top:40px;background:var(--blue);color:var(--paper);border:3px solid var(--ink);padding:clamp(22px,4vw,44px);display:grid;gap:18px;position:relative;overflow:hidden}
+.back .mono{color:var(--yellow)}
+.back h2{font-family:var(--f-mast);font-weight:400;font-size:clamp(40px,8vw,104px);line-height:.88;margin:0;text-shadow:5px 5px 0 var(--ink)}
+.back p{margin:0;font-weight:700;max-width:46ch;font-size:17px}
+.back .row{display:flex;flex-wrap:wrap;gap:10px}
+.back .row span,.back .row a{background:var(--paper);color:var(--ink);border:2px solid var(--ink);padding:9px 16px;font-weight:900;text-decoration:none;box-shadow:3px 3px 0 var(--ink);overflow-wrap:anywhere}
+.back .row a:hover{background:var(--yellow)}
+.back .hand{color:var(--yellow);font-size:32px}
+footer{padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:860px){
+  .cover-body,.editor,.contents,.duo{grid-template-columns:1fr}
+  .cover-right{justify-items:start;text-align:left}
+  .cover-right .cl{text-align:left}
+  .feat,.feat.third{grid-column:1/-1}
+  .cat{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .things{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mast{text-shadow:4px 4px 0 var(--ink)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .sticker{animation:wob 4s ease-in-out infinite}
+  @keyframes wob{0%,100%{transform:rotate(12deg)}50%{transform:rotate(4deg) scale(1.04)}}
+}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<div class="wrap">
+
+  <!-- COVER -->
+  <header class="cover">
+    <div class="cover-top mono"><span>Vol. 26 · Oct 2026</span><span>Resume + Portfolio issue</span><span>Free for recruiters</span></div>
+    <div>
+      <h1 class="mast">SITI</h1>
+      <div class="mast-sub"><span class="jp">NURJANAH</span><span class="tag">Design · Content · Ads · SEO</span></div>
+    </div>
+    <div class="cover-body">
+      <div class="coverlines">
+        <p class="cl-big"><span>The overthinker's guide</span><span>to why people click.</span></p>
+        <p class="cl"><b>26K</b>engagements a month with zero ad spend. How she did it.</p>
+        <p class="cl"><b>3</b>brands, 1 creative lead: a coffee chain, a padel club and an interiors label.</p>
+      </div>
+      <div class="cover-right">
+        <div class="sticker">HIRE<br>ME!<small>Based in Bali</small></div>
+        <p class="cl">Special: why "make it pop" isn't feedback</p>
+        <div class="barcode" aria-hidden="true"><i style="width:3px"></i><i style="width:1px"></i><i style="width:2px"></i><i style="width:1px"></i><i style="width:3px"></i><i style="width:1px"></i><i style="width:1px"></i><i style="width:2px"></i><i style="width:3px"></i><i style="width:1px"></i><i style="width:2px"></i><i style="width:1px"></i><i style="width:3px"></i><i style="width:2px"></i><i style="width:1px"></i><i style="width:3px"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- EDITOR'S NOTE -->
+  <section class="editor">
+    <div>
+      <div class="mono">Editor's note</div>
+      <h2>Graphic designer &amp; marketer. Writes words that rank, makes campaigns that convert.</h2>
+      <p>Professional overthinker with an unhealthy curiosity about why people click, scroll, and buy. I design the posts, write the captions, run the ads and read the numbers after.</p>
+      <p>Physics grad from Universitas Gadjah Mada who ended up in marketing, which explains the <span class="hl">obsession with data</span>.</p>
+    </div>
+    <div class="facts">
+      <img class="me" src="profile%20pic.jpg" alt="Siti Nurjanah" onerror="this.remove()">
+      <div><span class="mono">Name</span><span>Siti Nurjanah</span></div>
+      <div><span class="mono">Base</span><span>Bali, Indonesia</span></div>
+      <div><span class="mono">Now</span><span>Kosny (freelance) · Monolit Labs</span></div>
+      <div><span class="mono">Email</span><span><span id="email">inipunyasiti@gmail.com</span><button class="copy" id="copyEmail" type="button">Copy</button></span></div>
+      <div><span class="mono">Phone</span><span>+62 812-2981-0288</span></div>
+      <div><span class="mono">LinkedIn</span><span><a href="https://www.linkedin.com/in/inipunyasiti/" target="_blank" rel="noopener">in/inipunyasiti ↗</a></span></div>
+    </div>
+  </section>
+
+  <!-- CONTENTS -->
+  <nav class="contents" aria-label="Contents">
+    <h2>CON&shy;TENTS</h2>
+    <ol class="toc">
+      <li><a href="#features"><span class="n">P.04</span>Features: 8 projects<span class="dots"></span><span class="p">→</span></a></li>
+      <li><a href="#gallery"><span class="n">P.16</span>The lookbook: design work<span class="dots"></span><span class="p">→</span></a></li>
+      <li><a href="#career"><span class="n">P.18</span>Career map<span class="dots"></span><span class="p">→</span></a></li>
+      <li><a href="#bag"><span class="n">P.24</span>What's in her toolkit<span class="dots"></span><span class="p">→</span></a></li>
+      <li><a href="#reading"><span class="n">P.26</span>Reading list: her bylines<span class="dots"></span><span class="p">→</span></a></li>
+      <li><a href="#back"><span class="n">P.30</span>Next issue: you<span class="dots"></span><span class="p">→</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- FEATURES -->
+  <section class="spread" id="features">
+    <div class="kicker"><span class="pg">P.04</span><span class="hand">the good stuff ↓</span></div>
+    <h2>FEATURE<em>S</em></h2>
+    <p class="dek">Eight projects across design, e-commerce, ads, SEO and the web.</p>
+
+    <div class="feats">
+      <article class="feat full">
+        <div class="art yellow"><span class="no mono">No.01</span>
+          <span class="lbl solid">Google Ads</span><span class="lbl solid">Meta Ads</span><span class="lbl">Creative testing</span><span class="lbl">Reporting</span><span class="lbl">Client decks</span>
+          <span class="note">now freelancing!</span></div>
+        <div class="txt">
+          <div class="where">Kosny · Freelance · Now</div>
+          <h3>Google and Meta ads, from creative to client report</h3>
+          <ul><li>Run and analyse Google Ads and Meta Ads campaigns</li><li>Propose ad creative and run Meta creative tests across product lines</li><li>Turn performance data into client-ready presentations</li></ul>
+        </div>
+      </article>
+      <article class="feat">
+        <div class="art red"><span class="no mono">No.02</span>
+          <span class="lbl">Social posts</span><span class="lbl">Ad creatives</span><span class="lbl">Brand materials</span><span class="lbl">Meta Ads</span>
+          </div>
+        <div class="txt">
+          <div class="where">Monolit Labs · Jul 2026 – now</div>
+          <h3>Design and campaigns for an AI operations company</h3>
+          <ul><li>Social posts, ad creatives and branding materials</li><li>Campaign planning, scheduling and creative direction</li><li>Meta Ads targeting, creative testing and SEO</li></ul>
+        </div>
+      </article>
+
+      <article class="feat">
+        <div class="art yellow"><span class="no mono">No.03</span>
+          <span class="lbl solid">Shopline</span><span class="lbl">Shopee SG</span><span class="lbl">Lazada SG</span><span class="lbl">Amazon SG</span><span class="lbl">Meta + Google Ads</span></div>
+        <div class="txt">
+          <div class="where">Tea Therapy Singapore · Dec 2024 – Sep 2026</div>
+          <h3>A tea brand's whole online shop, from listing to ROAS</h3>
+          <ul><li>Shopline store plus three marketplaces: listings, pricing, promos</li><li>Meta and Google Ads with GA4 and GTM tracking, A/B tests</li><li>Email in ActiveCampaign and Apollo; influencer campaigns</li></ul>
+          <a class="go" href="https://teatherapy.com.sg" target="_blank" rel="noopener">teatherapy.com.sg ↗</a>
+        </div>
+      </article>
+
+      <article class="feat third">
+        <div class="art blue"><span class="no mono">No.04</span>
+          <div class="stat"><span class="huge">×3</span><span class="cap">brands at once</span></div></div>
+        <div class="txt">
+          <div class="where">Sep 2025 – Apr 2026</div>
+          <h3>Nabe Coffee, Jogja Padel &amp; Majja Decospace</h3>
+          <p>Creative direction, reels, KOL partnerships, Meta Ads and community events. Nabe has four branches.</p>
+        </div>
+      </article>
+
+      <article class="feat third">
+        <div class="art pink"><span class="no mono">No.05</span>
+          <div class="stat"><span class="huge">26K</span><span class="cap">monthly engagement, 0 ads</span></div></div>
+        <div class="txt">
+          <div class="where">Toko Buku Yang Tau · 2025</div>
+          <h3>An indie bookshop grown on organic content</h3>
+          <p>15 publisher partners, a Cargo site and IDR 3M+ in sales from March to July.</p>
+        </div>
+      </article>
+
+      <article class="feat third">
+        <div class="art yellow"><span class="no mono">No.06</span>
+          <div class="browser" aria-hidden="true"><div class="b-top"><i></i><i></i><i></i></div><div class="b-body"><div class="im"></div><div class="ln s"></div><div class="ln"></div></div></div></div>
+        <div class="txt">
+          <div class="where">Freelance · 2026</div>
+          <h3>pianohonolulu.com</h3>
+          <p>Designed, built and wrote the site for Dr. Kevin Priebe's piano studio in Honolulu.</p>
+          <a class="go" href="https://pianohonolulu.com" target="_blank" rel="noopener">Visit ↗</a>
+        </div>
+      </article>
+
+      <article class="feat">
+        <div class="art pink"><span class="no mono">No.07</span>
+          <div class="stat"><span class="huge">14</span><span class="cap">creative briefs</span></div>
+          <span class="lbl">Eryka + Kedai · 7</span><span class="lbl">FerbeTech · 7</span></div>
+        <div class="txt">
+          <div class="where">Freelance · Jul – Aug 2026</div>
+          <h3>Briefs for a café, a personal brand and a cybersecurity firm</h3>
+          <ul><li>Audience and competitor research, content pillars, brand voice</li><li>Goals, story angle, messaging, visual direction and formats per brief</li><li>Technical security topics turned into plain, scroll-stopping posts</li></ul>
+        </div>
+      </article>
+
+      <article class="feat">
+        <div class="art blue"><span class="no mono">No.08</span>
+          <div class="stat"><span class="huge">10K</span><span class="cap">monthly visitors</span></div>
+          <div class="stat"><span class="huge">+30%</span><span class="cap">engagement</span></div></div>
+        <div class="txt">
+          <div class="where">OPTIMA Media &amp; Advertising · Mar 2024 – Mar 2025</div>
+          <h3>SEO and editorial content that ranks</h3>
+          <ul><li>On-page, off-page and technical SEO with Search Console, Ahrefs, SEMrush</li><li>Research-led creative concepts that lifted engagement 30%, plus KOL handling</li><li>375+ articles for CampusNet and DietPartner, from intern to editor</li></ul>
+          <a class="go" href="https://campusnet.news/author/siti-nurjanah/" target="_blank" rel="noopener">Read her CampusNet articles ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="spread" id="gallery">
+    <div class="kicker"><span class="pg">P.16</span><span class="hand">click to zoom ↗</span></div>
+    <h2>THE <em>LOOKBOOK</em></h2>
+    <p class="dek">Social posts and ad creatives designed for clients.</p>
+    <div class="gallery">
+        <figure class="shot"><a href="Arya%20Sport%20Center%20Task%20-%20Siti.png" target="_blank" rel="noopener"><img src="Arya%20Sport%20Center%20Task%20-%20Siti.png" alt="Design for Arya Ubud Sport Centre" loading="lazy" onerror="this.closest('figure').remove()"></a><figcaption>Arya Ubud Sport Centre</figcaption></figure>
+        <figure class="shot"><a href="Avirtech%20Task-Siti%20Nurjanah.png" target="_blank" rel="noopener"><img src="Avirtech%20Task-Siti%20Nurjanah.png" alt="Design for Avirtech Group" loading="lazy" onerror="this.closest('figure').remove()"></a><figcaption>Avirtech Group</figcaption></figure>
+        <figure class="shot"><a href="Avirtech%20Task-Siti%20Nurjanah%20%281%29.png" target="_blank" rel="noopener"><img src="Avirtech%20Task-Siti%20Nurjanah%20%281%29.png" alt="Design for Avirtech Group" loading="lazy" onerror="this.closest('figure').remove()"></a><figcaption>Avirtech Group</figcaption></figure>
+        <figure class="shot"><a href="BOOGALOO%20JAKARTA-SITI.png" target="_blank" rel="noopener"><img src="BOOGALOO%20JAKARTA-SITI.png" alt="Design for Boogaloo Jakarta" loading="lazy" onerror="this.closest('figure').remove()"></a><figcaption>Boogaloo Jakarta</figcaption></figure>
+        <figure class="shot"><a href="BOOGALOO%20JAKARTA-SITI%20%281%29.png" target="_blank" rel="noopener"><img src="BOOGALOO%20JAKARTA-SITI%20%281%29.png" alt="Design for Boogaloo Jakarta" loading="lazy" onerror="this.closest('figure').remove()"></a><figcaption>Boogaloo Jakarta</figcaption></figure>
+        <figure class="shot"><a href="BOOGALOO%20JAKARTA-SITI%20%282%29.png" target="_blank" rel="noopener"><img src="BOOGALOO%20JAKARTA-SITI%20%282%29.png" alt="Design for Boogaloo Jakarta" loading="lazy" onerror="this.closest('figure').remove()"></a><figcaption>Boogaloo Jakarta</figcaption></figure>
+        <figure class="shot"><a href="BOOGALOO%20JAKARTA-SITI%20%284%29.png" target="_blank" rel="noopener"><img src="BOOGALOO%20JAKARTA-SITI%20%284%29.png" alt="Design for Boogaloo Jakarta" loading="lazy" onerror="this.closest('figure').remove()"></a><figcaption>Boogaloo Jakarta</figcaption></figure>
+        <figure class="shot"><a href="BOOGALOO%20JAKARTA-SITI%20%285%29.png" target="_blank" rel="noopener"><img src="BOOGALOO%20JAKARTA-SITI%20%285%29.png" alt="Design for Boogaloo Jakarta" loading="lazy" onerror="this.closest('figure').remove()"></a><figcaption>Boogaloo Jakarta</figcaption></figure>
+        <figure class="shot"><a href="LUMINA-SITI%20%281%29.png" target="_blank" rel="noopener"><img src="LUMINA-SITI%20%281%29.png" alt="Design for Lumina" loading="lazy" onerror="this.closest('figure').remove()"></a><figcaption>Lumina</figcaption></figure>
+        <figure class="shot"><a href="LUMINA-SITI%20%282%29.png" target="_blank" rel="noopener"><img src="LUMINA-SITI%20%282%29.png" alt="Design for Lumina" loading="lazy" onerror="this.closest('figure').remove()"></a><figcaption>Lumina</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- CAREER MAP -->
+  <section class="spread" id="career">
+    <div class="kicker"><span class="pg">P.18</span><span class="hand">where she's been</span></div>
+    <h2>CAREER <em>MAP</em></h2>
+    <p class="dek">From physics lab to copywriting to running ad accounts. Newest first.</p>
+    <div class="cat">
+      <div class="item"><span class="idx">01</span><div><h3>Marketing &amp; Advertising</h3><div class="org">Kosny · Freelance</div><div class="date">Now</div><p>Google Ads and Meta Ads management, creative testing, performance analysis and client presentations.</p></div></div>
+      <div class="item"><span class="idx">02</span><div><h3>Graphic Designer &amp; Marketing Executive</h3><div class="org">Monolit Labs</div><div class="date">Jul 2026 – now</div><p>Graphic assets, social campaigns, Meta Ads, SEO.</p></div></div>
+      <div class="item"><span class="idx">03</span><div><h3>Marketing Assistant</h3><div class="org">Tea Therapy Singapore</div><div class="date">Dec 2024 – Sep 2026</div><p>E-commerce, marketplaces, paid ads, email, influencers.</p></div></div>
+      <div class="item"><span class="idx">04</span><div><h3>Marketing Coordination</h3><div class="org">Just Skin Australia (project)</div><div class="date">Feb – Jun 2026</div><p>Multi-account campaigns on LinkedIn, Facebook and Instagram; CRM and reporting.</p></div></div>
+      <div class="item"><span class="idx">05</span><div><h3>Creative Specialist / Content Lead</h3><div class="org">Nabe · Jogja Padel · Majja Decospace</div><div class="date">Sep 2025 – Apr 2026</div><p>Creative direction, KOL, ads and events for three brands.</p></div></div>
+      <div class="item"><span class="idx">06</span><div><h3>Sales and Marketing</h3><div class="org">Toko Buku Yang Tau (EDSU)</div><div class="date">Jan – Jul 2025</div><p>Organic social, publisher partnerships, website, inventory.</p></div></div>
+      <div class="item wide"><span class="idx">07</span><div><h3>4 roles in 1 year 1 month</h3><div class="org">OPTIMA Media &amp; Advertising · Remote</div><div class="date">Mar 2024 – Mar 2025</div>
+        <ul class="sub">
+          <li><b>SEO Specialist</b> · Part-time · Jan – Mar 2025<br>Keyword research, on-page and off-page SEO, metadata and internal linking, technical SEO (speed, mobile, structured data), competitor analysis. Search Console, GA, Ahrefs, SEMrush.</li>
+          <li><b>Creative Strategist</b> · Freelance · Oct 2024 – Mar 2025<br>Research-led creative concepts that lifted audience engagement 30%, award-winning campaigns with media and account teams, content strategy and KOL handling.</li>
+          <li><b>Journalist &amp; Editor, CampusNet and DietPartner</b> · Freelance · Oct 2024 – Mar 2025<br>20 education articles a month, 300 in total; edited all intern articles to SEO standard before publishing.</li>
+          <li><b>Journalist &amp; Editor, CampusNet</b> · Intern · Mar – Sep 2024<br>75 articles in 3 months, all SEO-ready; campusnet.news reached 10,000 users.</li>
+        </ul>
+        <p class="links"><a href="https://optima-media.asia/author/siti-nurjanah/" target="_blank" rel="noopener">Optima author page ↗</a> <a href="https://campusnet.news/author/siti-nurjanah/" target="_blank" rel="noopener">CampusNet articles ↗</a> <a href="https://dietpartner.id/kreasi-mie-instan-ala-juri-culinary-class-netflix-ahn-sung-jae/" target="_blank" rel="noopener">DietPartner sample ↗</a> <a href="https://www.instagram.com/optima.mediaa/" target="_blank" rel="noopener">@optima.mediaa ↗</a></p>
+      </div></div>
+      <div class="item"><span class="idx">08</span><div><h3>Freelance Copy &amp; Social</h3><div class="org">Bali hospitality &amp; lifestyle</div><div class="date">Nov – Dec 2024</div><p>Arya Ubud Sport Centre, Avirtech, Baba Loft, Cook &amp; Baker, Kokobum, Masakali Retreat, Solara Villa.</p></div></div>
+      <div class="item"><span class="idx">09</span><div><h3>Copywriter Intern</h3><div class="org">Jogja Painting</div><div class="date">Feb – May 2023</div><p>Ad copy that lifted social engagement 15%.</p></div></div>
+      <div class="item"><span class="idx">10</span><div><h3>Quality Assurance Intern</h3><div class="org">PT Nanosense Instrumen Indonesia</div><div class="date">Feb – Jun 2023</div><p>Materials testing, troubleshooting and documentation.</p></div></div>
+    </div>
+  </section>
+
+  <!-- TOOLKIT + READING -->
+  <section class="spread">
+    <div class="duo">
+      <div class="bag" id="bag">
+        <div class="kicker"><span class="pg">P.24</span></div>
+        <h3>WHAT'S IN HER TOOLKIT</h3>
+        <span class="hand">used daily, no sponsors</span>
+        <div class="things">
+          <div class="thing"><span>Ads</span><b>Meta Ads</b></div>
+          <div class="thing"><span>Ads</span><b>Google Ads</b></div>
+          <div class="thing"><span>Tracking</span><b>GA4 + GTM</b></div>
+          <div class="thing"><span>SEO</span><b>Ahrefs · SEMrush</b></div>
+          <div class="thing"><span>Design</span><b>Canva</b></div>
+          <div class="thing"><span>Email</span><b>ActiveCampaign</b></div>
+          <div class="thing"><span>Shop</span><b>Shopline · Shopee · Lazada</b></div>
+          <div class="thing"><span>Web</span><b>WordPress · Cargo</b></div>
+          <div class="thing"><span>Words</span><b>Copy · Briefs · Editing</b></div>
+        </div>
+      </div>
+      <div class="reading" id="reading">
+        <div class="kicker"><span class="pg">P.26</span><span class="hand">her bylines</span></div>
+        <h3>READING LIST</h3>
+        <ol>
+          <li><span class="y">2020</span><span>Festival Ritual Nagari: Jembatan Pelestarian Budaya Minangkabau</span></li>
+          <li><span class="y">2021</span><span>The Wanderlust: Representasi Ruang Kebaikan di Tengah Pandemi</span></li>
+          <li><span class="y">2021</span><span>Legenda, Orang Tua, dan Pemberi "Beasiswa" dalam Sosok Yu Par</span></li>
+          <li><span class="y">2022</span><span>Diskriminasi dan Kekerasan Seksual terhadap Perempuan Masih Belum Tuntas</span></li>
+          <li><span class="y">2023</span><span>Intip Busana Sang It-girl Lily Rose Depp pada Series The Idol</span></li>
+        </ol>
+        <div class="edu"><b>BSc, Universitas Gadjah Mada</b><p>2020 – 2024 · GPA 3.47 / 4.00. Journalist &amp; editor at BPPM Balairung. SEO and EF English certified. Bahasa Indonesia &amp; English.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK COVER -->
+  <section class="back" id="back">
+    <span class="mono">P.30 · Next issue</span>
+    <h2>STARRING:<br>YOUR BRAND.</h2>
+    <p>Open to design, content and digital marketing roles, remote or in Bali.</p>
+    <div class="row">
+      <span>inipunyasiti@gmail.com</span>
+      <span>+62 812-2981-0288</span>
+      <a href="https://www.linkedin.com/in/inipunyasiti/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://www.instagram.com/aintcherrycandy/" target="_blank" rel="noopener">@aintcherrycandy ↗</a>
+    </div>
+    <span class="hand">see you on the next page :)</span>
+  </section>
+
+  <footer class="mono"><span>Siti Nurjanah · Bali</span><span>Vol. 26 · Oct 2026</span></footer>
+</div>
+
+<script>
+document.getElementById('copyEmail').addEventListener('click', function(){
+  var btn=this, el=document.getElementById('email');
+  function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected'}
+  try{navigator.clipboard.writeText(el.textContent).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1500)},sel)}catch(e){sel()}
+});
+window.addEventListener('load',function(){setTimeout(function(){
+  var g=document.querySelector('.gallery');
+  if(g&&!g.querySelector('figure')){document.getElementById('gallery').hidden=true;var t=document.querySelector('a[href="#gallery"]');if(t)t.parentNode.hidden=true}
+},300)});
+</script>
+
+</body>
+</html>
